@@ -1,17 +1,19 @@
 @import '../less/Index.less';
 
 
-:global{
-	.ant-layout-header{
-		padding: 0;
-		background-color: #fff;
-		box-shadow: 0 1px 10px rgba(0,0,0,.1);
-	}
-	.ant-layout{
-		min-height: 100vh;
-	}
-};
-
+.layout{
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+.headerBox{
+	width: 100%;
+	background-color: #fff;
+	box-shadow: 0 1px 10px rgba(0,0,0,.3);
+}
+.contentBox{
+	flex: 1;
+}
 
 .header{
 	.main_width();
