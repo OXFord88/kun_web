@@ -3,3 +3,105 @@
 .box{
 	min-height: 400px;
 }
+.insideBanner {
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	height: 400px;
+	img {
+		display: block;
+    width: 1920px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin-left: -960px;
+	}
+}
+.content {
+	.main_width();
+	.title {
+		h3 {
+			font-size: 36px;
+	    text-align: center;
+	    padding: 45px 0 31px;
+	    span {
+	    	display: inline-block;
+		    padding: 0 18px;
+		    border-top: 1px solid #346ccd;
+		    border-bottom: 1px solid #346ccd;
+		    color: #346ccd;
+		    height: 73px;
+		    line-height: 73px;
+		    text-transform: capitalize;
+	    }
+		}
+	}
+	.productList {
+		display: flex;
+		flex-wrap: wrap;
+		li {
+			width: 393px;
+			height: 315px;
+			position: relative;
+			text-align: center;
+			img {
+				width: 393px;
+				height: 315px;
+			}
+			.mask {
+				position: absolute;
+		    z-index: 2;
+		    top: 0;
+		    left: 0;
+		    padding: 45px 26px;
+		    width: 342px;
+		    height: 225px;
+		    background: rgba(2,56,148,0.5);
+		    color: #fff;
+		    display: none;
+			}
+			.titleName {
+				font-weight: normal;
+				a {
+					display: inline-block;
+			    height: 44px;
+			    line-height: 44px;
+			    overflow: hidden;
+			    padding: 0 12px;
+			    border-top: 1px solid #fff;
+			    border-bottom: 1px solid #fff;
+			    color: #fff;
+			    font-size: 36px;
+				}
+			}
+			.text {
+				font-size: 14px;
+		    line-height: 24px;
+		    height: 96px;
+		    overflow: hidden;
+		    margin-top: 25px;
+			}
+			.linkBtn {
+				height: 60px;
+		    line-height: 58px;
+		    text-align: center;
+		    margin-top: 10px;
+		    a {
+		    	padding: 10px 23px;
+			    border: 1px solid #fff;
+			    color: #fff;
+			    font-size: 36px;
+			    line-height: 36px;
+			    display: inline-block;
+			    height: 36px;
+		    }
+			}
+		}
+	 	li.active {
+			.mask {
+				display: block;
+			}
+		}
+	}
+}
