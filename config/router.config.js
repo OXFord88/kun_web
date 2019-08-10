@@ -5,12 +5,16 @@ export default [
 	// },
 	{
 		path: '/', // 登录
-		component: '../layouts/index',
+		component: '../layouts/Index',
 		routes: [
-			{ path: '/', component: './index' },
-			{ path: '/ok', component: './Ok' },
-			// { path: '/data', component: './Login/Data' },
-			// { path: '/result', component: './Login/Result' },
+			{path: '/', redirect: '/home' },
+			{ path: '/home', component: './home/Home' },
+			{ path: '/production', component: './production/Production' },
+			{ path: '/solution', component: './solution/Solution' },
+			{ path: '/case', component: './caseStudy/Case' },
+			{ path: '/service', component: './service/Service' },
+			{ path: '/news', component: './news/News' },
+			{ path: '/about', component: './about/About' },
 		]
 	}
 ]

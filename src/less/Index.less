@@ -1,5 +1,43 @@
-@import '../../less/Index.less';
 
-ul{
-	list-style: none;
+
+@font-size-base: 14px;
+@theme-color: #2584bd;
+@color: #f18e1e;
+@heading-color: rgba(0,0,0,.85);
+@black: #000;
+@red-6: #f5222d;
+@green-6: #52c41a;
+
+
+@border-color-split: hsv(0, 0, 91%);
+@text-color-secondary: fade(@black, 45%);
+@text-color: fade(@black, 65%);
+
+
+
+
+// need
+@width: 1180px;
+@link-color: #346ccd;
+
+
+.main_width() {
+  width: @width;
+  margin: 0 auto;
+}
+
+// utils
+.clearfix() {
+  zoom: 1;
+  &:before,
+  &:after {
+    content: ' ';
+    display: table;
+  }
+  &:after {
+    clear: both;
+    visibility: hidden;
+    font-size: 0;
+    height: 0;
+  }
 }

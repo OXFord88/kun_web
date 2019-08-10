@@ -6,7 +6,7 @@ const plugins = [
     dva: true,
     dynamicImport: { 
       webpackChunkName: true,
-      // loadingComponent: './components/PageLoading/Index', 
+      loadingComponent: './components/PageLoading/Index', 
     },
     title: '官网',
     dll: true,
