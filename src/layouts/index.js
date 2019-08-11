@@ -31,12 +31,6 @@ class BasicLayout extends React.Component {
 						{title: 'Fixed', path: '/home'}
 					]
 				},{
-					title: 'Solution', 
-					children: [
-						{title: 'LED Display', path: '/home'},
-						{title: 'LED Lighting', path: '/home'}
-					]
-				},{
 					title: 'Case study', 
 					children: [
 						{title: 'Application', path: '/home'},
@@ -115,9 +109,7 @@ class BasicLayout extends React.Component {
 					</div>
 				</div>
 	      <div className={l.contentBox}>
-		      <div className={l.content}>
-		      	{this.props.children}
-		      </div>
+	      	{this.props.children}
 	      </div>
 	      <div className={l.basic}>
 	      	<div className={l.top}>

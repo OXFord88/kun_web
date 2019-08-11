@@ -1,5 +1,382 @@
 @import '../../less/Index.less';
 
+.fixed{
+	position: fixed;
+	right: 0;
+	top: 35%;
+	width: 80px;
+	z-index: 100;
+	.fir{
+		padding: 10px 0 10px;
+		cursor: pointer;
+		text-align: center;
+		background-color: @link-color;
+		border-radius: 5px;
+		margin-bottom: 5px;
+		height: 60px;
+		overflow: hidden;
+		& > img{
+			margin-top: -60px;
+		}
+		.phone{
+			display: none;
+			position: absolute;
+			top: 0;
+			left: -260px;
+			color: #fff;
+			background-color: #000;
+			padding: 20px 10px;
+			opacity: 0;
+			transition: opacity ease-in .5s;
+			& > p{
+				text-align: left;
+				width: 240px;
+				display: flex;
+				margin-bottom: 10px;
+			}
+			p:nth-child(3){
+				margin-bottom: 0;
+			}
+		}
+		&:hover{
+			background-color: #14a83b;
+			.phone{
+				display: block;
+				opacity: 1;
+			}
+		};
+
+	}
+	.sec{
+		background-color: #1a1a1a;
+		color: #fff;
+		text-align: center;
+		border-radius: 5px;
+		padding: 40px 0 10px;
+		font-weight: bolder;
+		font-size: 20px;
+		position: relative;
+		cursor: pointer;
+		&::before{
+			content: '';
+			width: 20px;
+			height: 20px;
+			border-right: 2px solid #fff;
+			border-top: 2px solid #fff;
+			border-left: 2px solid transparent;
+			border-bottom: 2px solid transparent;
+			position: absolute;
+			top: 20px;
+			left: 35%;
+			transform: rotate(-45deg);
+			transition: top ease-in .2s;
+		}
+
+		&:hover{
+			&::before{
+				top: 15px;
+			}
+		}
+	}
+}
+
+
 .box{
 	min-height: 400px;
 }
+
+.banner-user{
+	height: 690px;
+}
+.banner-user-elem{
+	text-align: center;
+	.bg{
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		overflow: hidden;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+	}
+}
+
+
+.contain{
+
+	.title{
+		text-align: center;
+		font-size: 30px;
+		line-height: 30px;
+		padding: 60px 0;
+	}
+	.content{
+		.main_width();
+	}
+}
+
+.product{
+	height: 500px;
+	.cell{
+		display: flex;
+		padding: 0 100px;
+		.bg{
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			overflow: hidden;
+		}
+	}
+	.mr{
+		margin-right: 65px;
+	}
+	.son{
+		height: 100%;
+		width: 200px;
+		display: inline-block;
+		.sonCell{
+			padding-top: 60px;
+			transition: transform ease 1s;
+			cursor: pointer;
+			text-align: center;
+			& > img{
+				height: 200px;
+			}
+			.text{
+				text-align: center;
+				border-top: 1px solid #d2d2d2;
+				padding-top: 10px;
+				span{
+					display: block;
+				}
+				& > span:nth-child(1) {
+					color: #333;
+					font-size: 14px;
+					margin-bottom: 10px;
+				}
+				& > span:nth-child(2) {
+					color: #666;
+					font-size: 12px;
+				}
+			}
+
+			&:hover{
+				transform: translateY(-10px);
+				// background-color: red;
+			}
+		}
+		
+	}
+}
+
+.so_bg{
+	position: relative;
+	margin-bottom: 100px;
+	.learnBtn{
+		position: absolute;
+		bottom: -40px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 130px;
+		text-align: center;
+		padding: 8px 0;
+		background-color: @link-color;
+		color: #fff;
+		font-size: 18px;
+		&:hover{
+			background-color: lighten(@link-color, 5%);
+		}
+	}
+	.solution{
+		height: 450px;
+		.cell{
+			width: 100%;
+			// padding: 0 60px;
+			.bg{
+				height: 100%;
+				width: 100%;
+				position: absolute;
+				left: 0;
+				top: 0;
+				overflow: hidden;
+			}
+		}
+		.mr{
+			margin-right: 65px;
+		}
+		.son{
+			width: 350px;
+			background-color: #fff;
+			display: inline-block;
+			.sonCell{
+				border: 1px solid #d2d2d2;
+				.top{
+					width: 100%;
+					height: 200px;
+					overflow: hidden;
+					& > img{
+						height: 100%;
+						width: 100%;
+						transform: scale(1);
+						transition: transform ease-in 1s;
+					}
+				}
+				.bottom{
+					padding: 20px;
+					& > h3{
+						color: #333;
+						font-size: 18px;
+					}
+					& > p{
+						font-size: 12px;
+						line-height: 22px;
+						color: #666;
+						height: 90px;
+						overflow: hidden;
+					}
+					& > a{
+						display: block;
+						font-size: 14px;
+						line-height: 24px;
+						color: @link-color;
+						padding-left: 35px;
+						background-image: url('../../assets/home/indexsolution_05.png');
+						background-size: 24px 24px;
+						background-position: left center;
+						background-repeat: no-repeat;
+						transform: translateX(0);
+						transition: transform ease-in .2s;
+						width: 120px;
+						&:hover{
+							transform: translateX(15px);
+						}
+					}
+				}
+				&:hover{
+					.top{
+						& > img{
+							transform: scale(1.2);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.case{
+	padding-bottom: 60px;
+	background-image: url('../../assets/home/indexnews_bg.jpg');
+	background-size: 100% 100%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	.title{
+		text-align: center;
+		font-size: 30px;
+		line-height: 30px;
+		padding: 60px 0;
+		color: #fff;
+	}
+	.con{
+		height: 530px;
+		overflow: hidden;
+		.main_width();
+		display: flex;
+		.left{
+			& > img{
+				width: 300px;
+			}
+		}
+		.right{
+			flex: 1;
+			border: 1px solid #d2d2d2;
+			display: flex;
+			padding: 60px 0 30px 30px;
+			position: relative;
+			.learn{
+				position: absolute;
+				bottom: 20px;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 130px;
+				text-align: center;
+				padding: 8px 0;
+				background-color: @link-color;
+				color: #fff;
+				font-size: 18px;
+				&:hover{
+					background-color: lighten(@link-color, 5%);
+				}
+			}
+			& > div{
+				flex: 1;
+				padding-right: 30px;
+				cursor: pointer;
+				& > img{
+					width: 100%;
+					height: 300px;
+				}
+				& > p{
+					padding: 30px 10px;
+					line-height: 25px;
+					font-size: 14px;
+					color: #323232;
+					color: #fff;
+					text-align: center;
+				}
+				&:hover{
+					& > img{
+						opacity: .9;
+					}
+					& > p{
+						opacity: .9;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+.why{
+	background-color: #152935;
+	.title{
+		text-align: center;
+		font-size: 30px;
+		line-height: 30px;
+		padding: 30px 0;
+		color: #fff;
+	}
+	.content{
+		.main_width();
+		display: flex;
+		padding-bottom: 40px;
+		& > div{
+			flex: 1;
+			padding: 0 50px;
+			text-align: center;
+			& > img{
+				height: 140px;
+			}
+			& > h2{
+				font-size: 24px;
+				line-height: 48px;
+				color: #fff;
+			}
+			& > p{
+				font-size: 14px;
+				color: #aaa;
+				line-height: 24px;
+			}
+		}
+	}
+}
+
+
+
