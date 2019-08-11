@@ -109,7 +109,7 @@ class BasicLayout extends React.Component {
 					</div>
 				</div>
 	      <div className={l.contentBox}>
-	      	{this.props.children}
+		      {this.props.children}
 	      </div>
 	      <div className={l.basic}>
 	      	<div className={l.top}>
