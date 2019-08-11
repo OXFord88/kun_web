@@ -6,33 +6,19 @@ export default {
       url: '/img/products1.jpg',
       title: 'Narrow Pixel Pitch',
       text: 'LED Smart TV',
-      linkBtn: 'UTVⅢ',
-      categoryLink: '',
+      smalltitle: 'UTVⅢ',
+      disciption: 'UTVⅢ(Ultra HD LED Display)',
       link: '',
     }, {
       url: '/img/products1.jpg',
-      title: 'Narrow Pixel Pitch222',
+      title: 'Narrow Pixel ',
       text: 'LED Smart TV2',
       linkBtn: 'UTVⅢ2',
       categoryLink: '',
       link: '',
     }, {
       url: '/img/products1.jpg',
-      title: 'Narrow Pixel Pitch222',
-      text: 'LED Smart TV2',
-      linkBtn: 'UTVⅢ2',
-      categoryLink: '',
-      link: '',
-    }, {
-      url: '/img/products1.jpg',
-      title: 'Narrow Pixel Pitch222',
-      text: 'LED Smart TV2',
-      linkBtn: 'UTVⅢ2',
-      categoryLink: '',
-      link: '',
-    }, {
-      url: '/img/products1.jpg',
-      title: 'Narrow Pixel Pitch222',
+      title: 'Narrow Pixel ',
       text: 'LED Smart TV2',
       linkBtn: 'UTVⅢ2',
       categoryLink: '',
@@ -52,6 +38,17 @@ export default {
       categoryLink: '',
       link: '',
     }],
+    productnav: [
+      {
+        title: 'Narrow Pixel Pitch',
+      },
+      {
+        title: 'Rental',
+      },
+      {
+        title: 'Fixed',
+      }
+    ],
   },
   subscriptions: {
     setup({ dispatch }, done) {},

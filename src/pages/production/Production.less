@@ -38,70 +38,74 @@
 		}
 	}
 	.productList {
-		display: flex;
-		flex-wrap: wrap;
+		border-top: 1px solid #d2d2d2;
+		margin: 40px 0;
 		li {
-			width: 393px;
-			height: 315px;
-			position: relative;
-			text-align: center;
-			img {
-				width: 393px;
-				height: 315px;
+			display: flex;
+			justify-content: space-between;
+			padding-top: 46px;
+			h4 {
+		    text-align: center;
+		    font-size: 36px;
+		    color: #333;
+		    height: 297px;
+		    line-height: 297px;
+		    font-weight: normal;
 			}
-			.mask {
-				position: absolute;
-		    z-index: 2;
-		    top: 0;
-		    left: 0;
-		    padding: 45px 26px;
-		    width: 342px;
-		    height: 225px;
-		    background: rgba(2,56,148,0.5);
-		    color: #fff;
-		    display: none;
-			}
-			.titleName {
-				font-weight: normal;
-				a {
-					display: inline-block;
-			    height: 44px;
-			    line-height: 44px;
-			    overflow: hidden;
-			    padding: 0 12px;
-			    border-top: 1px solid #fff;
-			    border-bottom: 1px solid #fff;
-			    color: #fff;
-			    font-size: 36px;
-				}
+			h5 {
+				font-size: 14px;
+		    color: #333;
+		    font-weight: bold;
+		    line-height: 20px;
 			}
 			.text {
 				font-size: 14px;
-		    line-height: 24px;
-		    height: 96px;
-		    overflow: hidden;
-		    margin-top: 25px;
+		    line-height: 18px;
+		    color: #666;
+		    margin-top: 12px;
+		    margin-bottom: 30px;
 			}
-			.linkBtn {
-				height: 60px;
-		    line-height: 58px;
-		    text-align: center;
+			img {
+				cursor: pointer;
+			}
+			.dis {
+				/*padding-left: 11px;*/
+		    font-size: 14px;
+		    color: #346ccd;
 		    margin-top: 10px;
-		    a {
-		    	padding: 10px 23px;
-			    border: 1px solid #fff;
-			    color: #fff;
-			    font-size: 36px;
-			    line-height: 36px;
-			    display: inline-block;
-			    height: 36px;
+		    i {
+		    	border: 6px solid transparent;
+					border-left: 6px solid #346ccd;
+					width: 0;
+					height: 0;
+					display: inline-block;
 		    }
 			}
 		}
-	 	li.active {
-			.mask {
-				display: block;
-			}
+		.w370 {
+			width: 370px;
+			height: 298px;
+			border-bottom: 1px solid #666;
+		}
+	}
+	.productnav {
+		/*display: flex;
+		justify-content: space-around;*/
+		text-align: center;
+		a {
+			display: inline-block;
+	    width: 140px;
+	    height: 36px;
+	    line-height: 36px;
+	    font-size: 16px;
+	    color: #333;
+	    text-transform: capitalize;
+	    cursor: pointer;
+	    margin: 0 5px;
+		}
+		a.active, a:hover {
+			background: #346ccd;
+			color: #fff;
 		}
 	}
 }
