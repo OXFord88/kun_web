@@ -2,51 +2,51 @@ export default {
   namespace: 'products',
 
   state: {
-    productList: [{
-      url: '/img/products1.jpg',
-      title: 'Narrow Pixel Pitch',
-      text: 'LED Smart TV',
-      smalltitle: 'UTVⅢ',
-      disciption: 'UTVⅢ(Ultra HD LED Display)',
-      link: '',
-    }, {
-      url: '/img/products1.jpg',
-      title: 'Narrow Pixel ',
-      text: 'LED Smart TV2',
-      linkBtn: 'UTVⅢ2',
-      categoryLink: '',
-      link: '',
-    }, {
-      url: '/img/products1.jpg',
-      title: 'Narrow Pixel ',
-      text: 'LED Smart TV2',
-      linkBtn: 'UTVⅢ2',
-      categoryLink: '',
-      link: '',
-    }, {
-      url: '/img/products1.jpg',
-      title: 'Narrow Pixel Pitch222',
-      text: 'LED Smart TV2',
-      linkBtn: 'UTVⅢ2',
-      categoryLink: '',
-      link: '',
-    }, {
-      url: '/img/products1.jpg',
-      title: 'Narrow Pixel Pitch222',
-      text: 'LED Smart TV2',
-      linkBtn: 'UTVⅢ2',
-      categoryLink: '',
-      link: '',
-    }],
+    productList: {
+      'narrowPixelPitch': [{
+        url: '/img/products1.jpg',
+        title: 'Narrow Pixel Pitch',
+        text: 'LED Smart TV',
+        smalltitle: 'UTVⅢ',
+        disciption: 'UTVⅢ(Ultra HD LED Display)',
+        link: '',
+      }],
+      'rental': [{
+        url: '/img/products1.jpg',
+        title: 'Rental',
+        text: 'LED Smart TV',
+        smalltitle: 'UTVⅢ',
+        disciption: 'UTVⅢ(Ultra HD LED Display)',
+        link: '',
+      }, {
+        url: '/img/products1.jpg',
+        title: 'Rental',
+        text: 'LED Smart TV',
+        smalltitle: 'UTVⅢ',
+        disciption: 'UTVⅢ(Ultra HD LED Display)',
+        link: '',
+      }],
+      'fixed': [{
+        url: '/img/products1.jpg',
+        title: 'Fixed',
+        text: 'LED Smart TV',
+        smalltitle: 'UTVⅢ',
+        disciption: 'UTVⅢ(Ultra HD LED Display)',
+        link: '',
+      }]
+    },
     productnav: [
       {
         title: 'Narrow Pixel Pitch',
+        key: 'narrowPixelPitch',
       },
       {
         title: 'Rental',
+        key: 'rental',
       },
       {
         title: 'Fixed',
+        key: 'fixed',
       }
     ],
   },

@@ -10,17 +10,20 @@ import cx from 'classnames';
 class Production extends React.Component {
 	state = {
 		activeIndex: 0,
+		key: 'narrowPixelPitch',
 	}
 
-	handleClick = (index) => {
+	handleClick = (item, index) => {
 		console.log(index);
 		this.setState({
 			activeIndex: index,
+			key: item.key,
 		});
 	}
 
 	render() {
 		const { productList, productnav } = this.props;
+		const products = productList[this.state.key];
 		return (
 			<div className={l.box}>
 				<div className={l.insideBanner}>
@@ -32,11 +35,11 @@ class Production extends React.Component {
 					</div>
 					<div className={l.productnav}>
 						{productnav.map((item, index) => (
-							<a className={`${index == this.state.activeIndex ? l.active : ''}`} onClick={() => this.handleClick(index)}>{item.title}</a>
+							<a className={`${index == this.state.activeIndex ? l.active : ''}`} onClick={() => this.handleClick(item, index)}>{item.title}</a>
 						))}
 					</div>
 					<ul className={l.productList}>
-						{productList.map((item, index) => {
+						{products.map((item, index) => {
 							if (index % 2 == 0) {
 								return (
 									<li>
