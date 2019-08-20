@@ -4,7 +4,7 @@ import Link from 'umi/navlink'
 import LinkSmall from 'umi/link'
 import cx from 'classnames'
 import { connect } from 'dva'
-
+import BannerAnim, { Element } from 'rc-banner-anim';
 
 @connect(({ user }) => ({
   user
@@ -59,7 +59,8 @@ class BasicLayout extends React.Component {
 						{title: 'Contact us', path: '/home'}
 					]
 				}
-			]
+			],
+			order: 0
 		}
 	}
 	componentDidMount() {
@@ -80,31 +81,78 @@ class BasicLayout extends React.Component {
 			payload: {}
 		})
 	}
+
+
+
+	moveIn = (index, item, e) => {
+		e.stopPropagation()
+		this.setState({
+			order: index, 
+		})
+		this.banner.slickGoTo(index)
+	}
+	renderBtms = () => {
+		const { order } = this.state;
+		return(
+			<BannerAnim
+				thumb={false}
+				arrow={false}
+				initShow={1}
+				ref={(c) => { this.banner = c; }}
+				prefixCls={l['banner-user']}
+				type="verticalOverlay"
+			>
+				{
+					this.state.nav.map( (item, index) => {
+						return(
+							<Element prefixCls={l['banner-user-elem']} key={item.name} sync={true}>
+								<div className={l.hd}>
+		            	<div className={l.left}>
+		            		<img src="/img/yay.jpg" alt="icon"/>
+		            	</div>
+		            	<div className={l.right}>
+		            		Ant Motion Banner---
+		            		{order === index ? item.name : ''}
+		            	</div>
+		            </div>
+							</Element>
+						)
+					})
+				}
+			</BannerAnim>
+		)
+	}
 	render() {
 		const {
 			// dispatch,
 			user
 		} = this.props;
 		const {
-			footer
+			footer,
 		} = this.state;
-		console.log(user)
 		return (
 
 			<div ref={node => this.node = node} className={l.layout}>
-				<div className={l.headerBox}>
-					<div className={l.header}>
-						<div className={l.left}>
-							<LinkSmall to="/"><img src="/img/yay.jpg" alt="logo"/></LinkSmall>
+				<div className={l.topHead}>
+					<div className={l.headerBox}>
+						<div className={l.header}>
+							<div className={l.left}>
+								<LinkSmall to="/"><img src="/img/yay.jpg" alt="logo"/></LinkSmall>
+							</div>
+							<div className={l.middle}>
+								{
+									this.state.nav.map( (item,index) => {
+										return <Link onMouseEnter={this.moveIn.bind(null, index, item)}  to={item.path} key={index} className={cx(l.menuItems)} activeClassName={l.active}>
+											{item.icon} {item.name}
+										</Link>
+									})
+								}
+							</div>
 						</div>
-						<div className={l.middle}>
-							{
-								this.state.nav.map( (item,index) => {
-									return <Link to={item.path} key={index} className={cx(l.menuItems)} activeClassName={l.active}>
-										{item.icon} {item.name}
-									</Link>
-								})
-							}
+					</div>
+					<div className={l.btms}>
+						<div className={l.btmsCon}>
+							{this.renderBtms()}
 						</div>
 					</div>
 				</div>
