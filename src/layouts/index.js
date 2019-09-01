@@ -4,7 +4,10 @@ import Link from 'umi/navlink'
 import LinkSmall from 'umi/link'
 import cx from 'classnames'
 import { connect } from 'dva'
+
 import BannerAnim, { Element } from 'rc-banner-anim';
+import 'rc-banner-anim/assets/index.css';
+
 
 @connect(({ user }) => ({
   user
@@ -14,9 +17,8 @@ class BasicLayout extends React.Component {
 		super(props);
 		this.state = {
 			nav: [
-				{name: 'Home', path: '/home'},
+				// {name: 'Home', path: '/home'},
 				{name: 'Production', path: '/production'},
-				{name: 'Solution', path: '/solution'},
 				{name: 'Case study', path: '/case'},
 				{name: 'Service & Support', path: '/service'},
 				{name: 'News', path: '/news'},
@@ -60,7 +62,8 @@ class BasicLayout extends React.Component {
 					]
 				}
 			],
-			order: 0
+			order: 0,
+			height: 0
 		}
 	}
 	componentDidMount() {
@@ -91,6 +94,64 @@ class BasicLayout extends React.Component {
 		})
 		this.banner.slickGoTo(index)
 	}
+
+
+	renderContent = (order, index, item) => {
+		console.log(order)
+		if (order === 5) {
+			// about us
+			return(
+				<div className={l.hd} key={index}>
+	      	<div className={l.left}>
+	      		<img src="/about/about-us4.jpg" alt="icon"/>
+	      	</div>
+	      	<div className={l.middle}>
+        		<h2>About us</h2>
+        		<p>Unilumin is a leading LED application products and integrated solutions provider dedicated in LED product development, manufacturing, as well as worldwide sales and after-sales services</p>
+        	</div>
+	      	<ul className={l.right}>
+	      		<li><LinkSmall to="/about?type=company">Company profile</LinkSmall></li>
+	      		<li><LinkSmall to="/about?type=contact">Contact us</LinkSmall></li>
+	      	</ul>
+	      </div>
+      )
+		}else if (order === 4) {
+			return(
+				<div className={l.hd} key={index}>
+	      	<div className={l.left}>
+	      		<img src="/news/news.jpg" alt="icon"/>
+	      	</div>
+	      	<div className={l.middle}>
+        		<h2>News</h2>
+        		<p>Keep up with the latest Unilumin news.If you want to know more about industry trends or get familiar with the most advanced products, you can click here for more information.</p>
+        	</div>
+	      	<ul className={l.right}>
+	      	</ul>
+	      </div>
+      )
+		}
+
+
+		else{
+			return(
+				<div className={l.hd} key={index}>
+        	<div className={l.left}>
+        		<img src="/img/yay.jpg" alt="icon"/>
+        	</div>
+        	<div className={l.middle}>
+        		<h2>About us</h2>
+        		<p>Unilumin is a leading LED application products and integrated solutions provider dedicated in LED product development, manufacturing, as well as worldwide sales and after-sales services</p>
+        	</div>
+        	<ul className={l.right}>
+	      		<li>123</li>
+	      		<li>123</li>
+	      		<li>123</li>
+	      		<li>123</li>
+	      	</ul>
+        </div>
+			)
+		}
+	}
 	renderBtms = () => {
 		const { order } = this.state;
 		return(
@@ -105,22 +166,27 @@ class BasicLayout extends React.Component {
 				{
 					this.state.nav.map( (item, index) => {
 						return(
-							<Element prefixCls={l['banner-user-elem']} key={item.name} sync={true}>
-								<div className={l.hd}>
-		            	<div className={l.left}>
-		            		<img src="/img/yay.jpg" alt="icon"/>
-		            	</div>
-		            	<div className={l.right}>
-		            		Ant Motion Banner---
-		            		{order === index ? item.name : ''}
-		            	</div>
-		            </div>
+							<Element prefixCls={l['banner-user-elem']} key={item.name} leaveChildHide={true} sync={true}>
+								{this.renderContent(order,index, item)}
 							</Element>
 						)
 					})
 				}
 			</BannerAnim>
 		)
+	}
+
+
+	header = (type) => {
+		if (type === 'in') {
+			// this.setState({
+			// 	height: 200
+			// })
+		}else if (type === 'out') {
+			// this.setState({
+			// 	height: 0
+			// })
+		}
 	}
 	render() {
 		const {
@@ -129,17 +195,18 @@ class BasicLayout extends React.Component {
 		} = this.props;
 		const {
 			footer,
+			height
 		} = this.state;
 		return (
 
 			<div ref={node => this.node = node} className={l.layout}>
 				<div className={l.topHead}>
-					<div className={l.headerBox}>
-						<div className={l.header}>
+					<div className={l.first}>
+						<div className={cx(l.cons, l.nav)}>
 							<div className={l.left}>
 								<LinkSmall to="/"><img src="/img/yay.jpg" alt="logo"/></LinkSmall>
 							</div>
-							<div className={l.middle}>
+							<div onMouseEnter={this.header.bind(null, 'in')} onMouseLeave={this.header.bind(null, 'out')} className={l.middle}>
 								{
 									this.state.nav.map( (item,index) => {
 										return <Link onMouseEnter={this.moveIn.bind(null, index, item)}  to={item.path} key={index} className={cx(l.menuItems)} activeClassName={l.active}>
@@ -150,12 +217,13 @@ class BasicLayout extends React.Component {
 							</div>
 						</div>
 					</div>
-					<div className={l.btms}>
-						<div className={l.btmsCon}>
+					<div onMouseEnter={this.header.bind(null, 'in')} onMouseLeave={this.header.bind(null, 'out')} className={l.second} style={{height}}>
+						<div className={cx(l.cons, l.bottom)}>
 							{this.renderBtms()}
 						</div>
 					</div>
 				</div>
+
 	      <div className={l.contentBox}>
 		      {this.props.children}
 	      </div>

@@ -63,7 +63,7 @@ class Home extends React.Component {
 				<div className={l.contain}>
 					<div className={l.title}>Product</div>
 					<div className={l.content}>
-						<BannerAnim prefixCls={l.product} type="across" dragPlay={false}>
+						<BannerAnim prefixCls={l.product} type="across" thumb={false} dragPlay={false}>
 							{
 								this.dealProduct(products).map( (item,index) => {
 									return(
@@ -98,7 +98,7 @@ class Home extends React.Component {
 					<div className={l.title}>Case Study</div>
 					<div className={l.con}>
 						<div className={l.left}>
-							<img src="/case/indexcase_01.jpg" alt="icon"/>
+							<img src="/home/case/indexcase_01.jpg" alt="icon"/>
 						</div>
 						<div className={l.right}>							
 							{

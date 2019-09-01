@@ -7,8 +7,7 @@ export default [
 		path: '/', // 登录
 		component: '../layouts/Index',
 		routes: [
-			{path: '/', redirect: '/home' },
-			{ path: '/home', component: './home/Home' },
+			{ path: '/', component: './home/Home' },
 			{ path: '/production', component: './production/Production' },
 			{ path: '/solution', component: './solution/Solution' },
 			{ path: '/case', component: './caseStudy/Case' },
