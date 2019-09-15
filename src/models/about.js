@@ -32,7 +32,7 @@ const company = [
     ]
   },
   {
-    img: "/about/content1.jpg",
+    img: "/about/content1.jpg", //最后一个图片 1180 X 400
     content: [
       {
         title: 'Last Genneral Introduction', 
@@ -141,20 +141,21 @@ export default {
   namespace: 'about',
 
   state: {
+    banner: '/about/banner.jpg',
     company: company,
     contact: {
       address: {
-        title: 'UNILUMIN GROUP CO., LTD.',
+        title: 'UNILUMIN GROUP CO., LTD.', // 标题
         list: address
       },
       area: {
         title: 'UNILUMIN GROUP CO., LTD.',
-        til: 'OFFICIAL WEBSITE: HTTP://WWW.UNILUMIN.COM',
+        til: 'OFFICIAL WEBSITE: HTTP://WWW.UNILUMIN.COM', // 标题
         list: area
       },
       bottom: {
-        title: 'LED LIGHTINGDIVISION',
-        til: 'OVERSEAS MARKETING DEPARTMENT',
+        title: 'LED LIGHTINGDIVISION', // 标题
+        til: 'OVERSEAS MARKETING DEPARTMENT', // 副标题
         list: bottom
       }
     },

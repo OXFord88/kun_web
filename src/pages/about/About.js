@@ -7,7 +7,8 @@ import l from './About.less'
 
 @connect(({ about }) => ({
   companyData: about.company,
-  contact: about.contact
+  contact: about.contact,
+  banner: about.banner,
 }))
 class About extends React.Component {
 	state = {
@@ -21,10 +22,10 @@ class About extends React.Component {
 	}
 	render() {
 		const { active } = this.state;
-		const { companyData, contact: {address, area, bottom} } = this.props;
+		const { companyData, contact: {address, area, bottom}, banner } = this.props;
 		return (
 			<div className={l.box}>
-				<div className={l.insideBanner}></div>
+				<div className={l.insideBanner} style={{backgroundImage: `url(${banner})`}}></div>
 				<div className={l.content}>
 					<div className={l.title}>
 						<h3><span>ABOUT US</span></h3>

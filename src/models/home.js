@@ -2,10 +2,10 @@
 
 // 首页的banner图
 const banners = [
-  '/banner/banner0.jpg',  // 尺寸 无限宽 X 690
-  '/banner/banner1.jpg', 
-  '/banner/banner2.jpg', 
-  '/banner/banner3.jpg'
+  '/home/banner/banner0.jpg',  // 尺寸 无限宽 X 690
+  '/home/banner/banner1.jpg', 
+  '/home/banner/banner2.jpg', 
+  '/home/banner/banner3.jpg'
 ]
 
 // 产品图 图片尺寸 170 X 200
@@ -37,6 +37,13 @@ const news = [
   {img: "/home/solu/1a.jpg", title: '3Security Monitoring', text: 'As the quantity of security access signal and screen signal is numerous, and resolution is restricted by display area...'}
 ]
 
+
+const contact = {
+  Phone: '1888888888',
+  Eamil: '361196961@qq.com',
+  Addre: 'beijing city address beijing',
+}
+
 export default {
   namespace: 'home',
 
@@ -45,6 +52,7 @@ export default {
     products: products,
     casees: casees,
     news: news,
+    contact: contact,
   },
   subscriptions: {
     setup({ dispatch }, done) {},

@@ -3,15 +3,16 @@ import l from './News.less'
 import { connect } from 'dva';
 
 @connect(({ news }) => ({
-  list: news.list
+  list: news.list,
+  banner: news.banner
 }))
 class News extends React.Component {
 
 	render() {
-		const { list } = this.props;
+		const { list, banner } = this.props;
 		return (
 			<div className={l.box}>
-				<div className={l.insideBanner}></div>
+				<div className={l.insideBanner} style={{backgroundImage: `url(${banner})`}}></div>
 				<div className={l.content}>
 					<div className={l.title}>
 						<h3><span>News</span></h3>

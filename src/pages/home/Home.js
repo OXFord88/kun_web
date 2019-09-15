@@ -3,7 +3,7 @@ import l from './Home.less';
 import cx from 'classnames';
 import { connect } from 'dva'
 import Link from 'umi/link'
-import phone from '@/assets/indexwrap_01.png'
+import phone from '@/assets/home/indexwrap_01.png'
 import BannerAnim, { Element } from 'rc-banner-anim';
 import TweenOne from 'rc-tween-one';
 import 'rc-banner-anim/assets/index.css';
@@ -31,16 +31,16 @@ class Home extends React.Component {
 		return temp;
 	}
 	render() {
-		const { home: {banners, products, casees, news} } = this.props;
+		const { home: {banners, products, casees, news, contact} } = this.props;
 		return (
 			<div className={l.box} ref={node => this.node = node}>
 				<div className={l.fixed}>
 					<div className={l.fir}>
 						<img src={phone} alt=""/>
 						<div className={l.phone}>
-							<p className={l.num}><span>Phone：</span><span>1888888888</span></p>
-							<p className={l.eamil}><span>Eamil：</span><span>361196961@qq.com</span></p>
-							<p className={l.address}><span>Addre：</span><span>beijing city address beijing</span></p>
+							<p className={l.num}><span>Phone：</span><span>{contact.Phone}</span></p>
+							<p className={l.eamil}><span>Eamil：</span><span>{contact.Eamil}</span></p>
+							<p className={l.address}><span>Addre：</span><span>{contact.Addre}</span></p>
 						</div>
 					</div>
 					<div onClick={this.scrollTop} className={l.sec}>
@@ -151,17 +151,17 @@ class Home extends React.Component {
 					<h3 className={l.title}>Why choose Unilumin?</h3>
 					<div className={l.content}>
 						<div>
-							<img src="/why/indexwhy_01.png" alt="icon"/>
+							<img src="/home/why/indexwhy_01.png" alt="icon"/>
 							<h2>Sales Networks</h2>
 							<p>Service and support network in over 100 countries</p>
 						</div>
 						<div>
-							<img src="/why/indexwhy_02.png" alt="icon"/>
+							<img src="/home/why/indexwhy_02.png" alt="icon"/>
 							<h2>Technology</h2>
 							<p>500+ personnel R&D team </p>
 						</div>
 						<div>
-							<img src="/why/indexwhy_03.png" alt="icon"/>
+							<img src="/home/why/indexwhy_03.png" alt="icon"/>
 							<h2>Service</h2>
 							<p> 24/7 pre-sales and after-sales services</p>
 						</div>

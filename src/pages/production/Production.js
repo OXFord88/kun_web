@@ -6,6 +6,7 @@ import cx from 'classnames';
 @connect(({ products }) => ({
   productList: products.productList,
   productnav: products.productnav,
+  banner: products.banner
 }))
 class Production extends React.Component {
 	state = {
@@ -22,13 +23,11 @@ class Production extends React.Component {
 	}
 
 	render() {
-		const { productList, productnav } = this.props;
+		const { productList, productnav, banner } = this.props;
 		const products = productList[this.state.key];
 		return (
 			<div className={l.box}>
-				<div className={l.insideBanner}>
-					<img src="/img/produtsbanner.jpg" />
-				</div>
+				<div className={l.insideBanner} style={{backgroundImage: `url(${banner})`}}></div>
 				<div className={l.content}>
 					<div className={l.title}>
 						<h3><span>PRODUCT</span></h3>
