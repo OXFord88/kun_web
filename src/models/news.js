@@ -192,7 +192,8 @@ export default {
 
   state: {
     list: data,
-    datas: obj
+    datas: obj,
+    banner: '/news/banner.jpg'
   },
   subscriptions: {
     setup({ dispatch }, done) {},

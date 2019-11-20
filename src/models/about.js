@@ -146,6 +146,7 @@ export default {
   namespace: 'about',
 
   state: {
+    banner: '/about/banner.jpg',
     company: company,
     contact: {
       address: {
@@ -160,8 +161,8 @@ export default {
         list: []
       },
       bottom: {
-        title: 'LED LIGHTINGDIVISION',
-        til: 'OVERSEAS MARKETING DEPARTMENT',
+        title: 'LED LIGHTINGDIVISION', // 标题
+        til: 'OVERSEAS MARKETING DEPARTMENT', // 副标题
         list: bottom
       }
     },
