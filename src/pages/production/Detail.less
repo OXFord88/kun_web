@@ -1,0 +1,145 @@
+@import '../../less/Index.less';
+
+.top{
+    background-color: #f5f5f5;
+    & > div{
+        .main_width();
+        padding-top: 40px;
+        text-align: center;
+        & > h2{
+            font-size: 2.25em;
+            margin-bottom: 20px;
+        }
+        & > p{
+            font-size: 1em;
+            color: #717171;
+            line-height: 25px;
+        }
+    }
+}
+.gray{
+    background-color: #f5f5f5;
+    & > div{
+        .main_width();
+    }
+}
+.white{
+    background-color: #fff;
+    & > div{
+        .main_width();
+    }
+}
+
+
+.cell{
+    display: flex;
+    padding-top: 80px;
+    padding-bottom: 40px;
+    .left{
+        padding-top: 40px;
+        flex: 1;
+        & > h3{
+            font-size: 2em;
+            line-height: 40px;
+            margin-bottom: 20px;
+        }
+        & > p{
+            font-size: 1em;
+            color: #717171;
+            line-height: 25px;
+        }
+    }
+    & > img{
+        flex: 1;
+    }
+}
+
+.lastImg{
+    text-align: center;
+    .main_width();
+    padding: 20px;
+}
+
+.listText{
+    padding: 80px 0;
+    text-align: center;
+   
+    & > p{
+        font-size: 1.125em;
+        line-height: 40px;
+        font-weight: 500;
+    }
+    
+}
+
+
+
+
+
+
+// dip 产品
+.topBox{
+    & > h1{
+        font-size: 60px;
+        line-height: 80px;
+        margin-bottom: 20px;
+    }
+    & > h2{
+        font-size: 50px;
+        line-height: 60px;
+        text-align: left;
+        padding-left: 20%;
+    }
+    & > img{
+        height: 500px;
+        margin-bottom: 100px;
+    }
+    & > p{
+        padding-left: 20%;
+        text-align: left;
+        margin-bottom: 40px;
+    }
+
+}
+
+.power{
+    display: flex;
+    align-items: center;
+    margin-bottom: 100px;
+    & > div{
+        flex: 1;
+    }
+    & > img{
+        height: 500px;
+    }
+    h2{
+        font-size: 50px;
+        margin-bottom: 30px;
+    }
+    span{
+        display: block;
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+}
+.table{
+    
+    width: 80%;
+    margin: 40px auto;
+    thead{
+        background-color: #333;
+    }
+    th{
+        
+        color: #fff;
+        
+    }
+    td, th{
+        border-bottom: 1px solid #f5f5f5;
+        line-height: 60px;
+        font-size: 18px;
+    }
+    tr:hover{
+        background-color: #f2f2f2;
+    }
+}

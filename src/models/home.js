@@ -2,10 +2,13 @@
 
 // 首页的banner图
 const banners = [
-  '/banner/banner0.jpg',  // 尺寸 无限宽 X 690
-  '/banner/banner1.jpg', 
-  '/banner/banner2.jpg', 
-  '/banner/banner3.jpg'
+  '/banner/Main1.jpg',  // 尺寸 无限宽 X 690
+  '/banner/Main2.jpg', 
+  '/banner/Main3.jpg', 
+  '/banner/L.jpg',
+  '/banner/E.jpg',
+  '/banner/HQ.jpg',
+  '/banner/H251R.jpg',
 ]
 
 // 产品图 图片尺寸 170 X 200

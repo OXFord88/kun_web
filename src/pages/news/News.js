@@ -1,5 +1,6 @@
 import React from 'react';
 import l from './News.less'
+import Link from 'umi/link'
 import { connect } from 'dva';
 
 @connect(({ news }) => ({
@@ -28,7 +29,7 @@ class News extends React.Component {
 											<h5>{item.til}</h5>
 											<p>{item.text.length > 320 ? item.text.slice(0, 320) + '...' : item.text}</p>
 											<h6>{item.time}</h6>
-											<span>see more</span>
+											<span><Link to={item.link}>see more</Link></span>
 										</div>
 									</div>
 								)

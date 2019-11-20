@@ -47,10 +47,35 @@
 		li {
 			width: 586px;
 			height: 332px;
-			margin-bottom: 4px;
+			margin-bottom: 14px;
+			overflow: hidden;
+			position: relative;
+			cursor: pointer;
 			img {
 				width: 100%;
 				height: 100%;
+				opacity: 1;
+				transition: opacity ease-in .5s;
+			}
+			& > p{
+				width: 100%;
+				padding: 10px;
+				text-align: center;
+				position: absolute;
+				left: 0;
+				bottom: -100px;
+				background-color: rgba(2,56,148,0.5);
+				color: #fff;
+				font-size: 18px;
+				transition: bottom ease-in .2s;
+			}
+			&:hover{
+				& > p{
+					bottom: 0;
+				}
+				& > img{
+					// opacity: .8;
+				}
 			}
 		}
 	}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'dva';
+import Link from 'umi/link'
 import l from './Production.less';
 import cx from 'classnames';
 
@@ -10,11 +11,10 @@ import cx from 'classnames';
 class Production extends React.Component {
 	state = {
 		activeIndex: 0,
-		key: 'narrowPixelPitch',
+		key: 'finePitch',
 	}
 
 	handleClick = (item, index) => {
-		console.log(index);
 		this.setState({
 			activeIndex: index,
 			key: item.key,
@@ -47,12 +47,12 @@ class Production extends React.Component {
 											<a>{item.title}</a>
 										</h4>
 										<div className={cx(l.imgbox, l.w370)}>
-											<img src={item.url} />
+											<Link to={`${item.link}`}><img src={item.url} /></Link>
 										</div>
 										<div className={cx(l.mask, l.w370)}>
 											<h5>{item.smalltitle}</h5>
 											<p className={l.text}>{item.text}</p>
-											<p className={l.dis}><i></i>{item.disciption}</p>
+											{item.disciption && <p className={l.dis}><i></i>{item.disciption}</p>}
 										</div>
 									</li>
 								);
@@ -62,10 +62,10 @@ class Production extends React.Component {
 										<div className={cx(l.mask, l.w370)}>
 											<h5>{item.smalltitle}</h5>
 											<p className={l.text}>{item.text}</p>
-											<p className={l.dis}><i></i>{item.disciption}</p>
+											{item.disciption && <p className={l.dis}><i></i>{item.disciption}</p>}
 										</div>
 										<div className={cx(l.imgbox, l.w370)}>
-											<img src={item.url} />
+											<Link to={`${item.link}`}><img src={item.url} /></Link>
 										</div>
 										<h4 className={cx(l.titleName, l.w370)}>
 											<a>{item.title}</a>

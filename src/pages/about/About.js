@@ -129,11 +129,12 @@ class About extends React.Component {
 								}
 							</div>
 							<div className={l.map}>
+								<img src={address.maps} alt="map"/>
 							</div>
 
 							<div className={l.addr}>
 								<h2>{area.title}</h2>
-								<h5>{area.til}</h5>
+								<p>{area.text}</p>
 								<ul className={l.list}>
 									{
 										area.list.map( (item,index) => {
@@ -177,8 +178,8 @@ class About extends React.Component {
 							</div>
 
 							<div className={l.addr}>
-								<h2>{bottom.title}</h2>
-								<h5>{bottom.til}</h5>
+								{/* <h2>{bottom.title}</h2>
+								<h5>{bottom.til}</h5> */}
 								<div className={l.cell}>
 									{
 										bottom.list.map( (k,j) => {

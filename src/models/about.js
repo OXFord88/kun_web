@@ -10,33 +10,38 @@
 */
 const company = [
   {
-    img: "/about/content1.jpg", 
+    img: "/about/WechatIMG210.jpeg", 
     content: [
       {
         title: 'Genneral Introduction', 
-        text: 'Unilumin Group Co., Ltd. (stock code 300232), a world-class LED display solution provider, aims to provide global customers with high quality LED display products. The LED display market share of Unilumin ranks among the top three in the world for consecutive years'
-      },
-      {
-        title: 'Genneral Introduction', 
-        text: 'Unilumin Group Co., Ltd. (stock code 300232), a world-class LED display solution provider, aims to provide global customers with high quality LED display products. The LED display market share of Unilumin ranks among the top three in the world for consecutive years'
+        text: 'ENOR ELECTRONICS CO., LIMITED , a world-class LED display solution provider, aims to provide global customers with high quality LED display products. Enor comes from an old saying which means “we value your trust, we value our promise.'
       },
     ]
   },
   {
-    img: "/about/content1.jpg",
+    img: "/about/WechatIMG212.jpeg",
     content: [
       {
-        title: 'Genneral Introduction', 
-        text: 'Unilumin Group Co., Ltd. (stock code 300232), a world-class LED display solution provider, aims to provide global customers with high quality LED display products. The LED display market share of Unilumin ranks among the top three in the world for consecutive years'
-      },
+        title: 'Our Strength',
+        text: 'We now have three production lines---regular product line, fine pitch product line and DIP production line. We are growing up rapidly during the past years with our products exported to more than one hundred countries and regions, such as USA, Europe, Africa, India... ISO9001 and ISO14001 quality management systems are strictly carried out, our products have already passed CE, ROHS, FCC and UL certifications. Up to now, we have completed more than 10,000 projects around the world successfully.'
+      }
     ]
   },
   {
-    img: "/about/content1.jpg",
+    img: "/about/WechatIMG213.jpeg",
     content: [
       {
-        title: 'Last Genneral Introduction', 
-        text: 'Unilumin Group Co., Ltd. (stock code 300232), a world-class LED display solution provider, aims to provide global customers with high quality LED display products. The LED display market share of Unilumin ranks among the top three in the world for consecutive years'
+        title: 'Our Mission',
+        text: 'Our mission at Enor is to provide the best LED screen solution for our trusted customers all around the world. For presales service, we have professional engineers to reply all your questions and enquiries and provide all-round solutions for your projects and offer technical training. For after sales service, we provide customized support, such as sending required spare parts in time, online support, on site repair, etc. We make every possible effort to meet customers’ requirements and ensure mutual benefit and long term cooperation.'
+      }
+    ]
+  },
+  {
+    img: "/about/WechatIMG211.jpeg",
+    content: [
+      {
+        title: '',
+        text: 'Your satisfaction, our inspiration'
       }
     ]
   },
@@ -54,28 +59,28 @@ const address = [
     img: "/about/address.gif",
     til: 'Address',
     text: [
-      '112 Yongfu Rd., Qiaotou Village, Fuyong Town, Baoan District, Shenzhen 518103 China'
+      'QIAOTONG Industrial Part, Shiyan, Baoan District, Shenzhen,China'
     ]
   },
   {
     img: "/about/tel.gif",
     til: 'Tel',
     text: [
-      '112 Yongfu Rd., Qiaotou Village, Fuyong Town, Baoan District, Shenzhen 518103 China'
+      '+86-13631566043'
     ]
   },
   {
     img: "/about/fax.gif",
     til: 'Fax',
     text: [
-      '112 Yongfu Rd., Qiaotou Village, Fuyong Town, Baoan District, Shenzhen 518103 China'
+      '+86-755-61881888'
     ]
   },
   {
     img: "/about/factory.gif",
     til: 'Factory Address',
     text: [
-      '112 Yongfu Rd., Qiaotou Village, Fuyong Town, Baoan District, Shenzhen 518103 China'
+      'Website:www.enorled.com'
     ]
   },
 ]
@@ -115,21 +120,21 @@ const bottom = [
     img: "/about/tel.gif",
     til: 'Tel',
     text: [
-      '+86-755-29918999'
+      '+86-13631566043'
     ]
   },
   {
     img: "/about/fax.gif",
     til: 'Fax',
     text: [
-      '+86-755-29892092'
+      '+86-755-61881888'
     ]
   },
   {
     img: "/about/email.gif",
     til: 'E-mail',
     text: [
-      'ledlighting@unilumin.com'
+      'info@enorled.com'
     ]
   }
 ]
@@ -144,13 +149,15 @@ export default {
     company: company,
     contact: {
       address: {
-        title: 'UNILUMIN GROUP CO., LTD.',
-        list: address
+        title: 'ENOR ELECTRONICS CO., LIMITED',
+        list: address,
+        maps: '/about/pg.png'
       },
       area: {
-        title: 'UNILUMIN GROUP CO., LTD.',
-        til: 'OFFICIAL WEBSITE: HTTP://WWW.UNILUMIN.COM',
-        list: area
+        title: 'WORK WITH US',
+        text: 'We’re flexible and cooperative and determined to help you with your LED screen project. Over the last few years, we have specialized and affirmed in the LED video industry with a growing network of agents. Our team is dynamic, flexible and competitive. If you have a need,we’re here for you.If you’re interested in being our agent.',
+        // list: area
+        list: []
       },
       bottom: {
         title: 'LED LIGHTINGDIVISION',

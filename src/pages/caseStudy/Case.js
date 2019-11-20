@@ -23,6 +23,7 @@ class Case extends React.Component {
 						{cases.map((item, index) =>
 							<li>
 								<img src={item.url} alt="" />
+								<p>{item.discription}</p>
 							</li>
 						)}
 					</ul>
