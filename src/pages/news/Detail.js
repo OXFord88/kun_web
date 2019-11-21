@@ -6,7 +6,9 @@ import { connect } from 'dva';
     data: news.datas
 }))
 class Detail extends React.Component{
-    
+    componentDidMount() {
+		window.scrollTo(0, 0)
+	}
     render() {
         const { data, location: {query}} = this.props;
         const message= data[query.id];

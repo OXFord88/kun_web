@@ -15,6 +15,9 @@ class About extends React.Component {
 		active: 'company',
 		
 	}
+	componentDidMount() {
+		window.scrollTo(0, 0)
+	}
 	handle = (type) => {
 		this.setState({
 			active: type

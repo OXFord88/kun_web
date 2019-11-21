@@ -11,42 +11,41 @@
 
 const data = [
   {
-    img: "/news/new1.jpg", // 尺寸585 X 300
+    img: '/news/1-1.png', // 尺寸585 X 300
     title: 'Further protection',
     til: 'Further protection',
     text: "In June, south China just has steped into a long rainy season, as LED is a Moisture Senstive Deivice, here is some knowledge i think you would like to know: about how to maintain the LED screen in the enviroments with heavy humidity",
     time: "2019-12-12",
     link: '/news/detail?id=1',
   },{
-    img: "/news/new1.jpg", // 尺寸585 X 300
+    img: '/news/2-1.jpeg', // 尺寸585 X 300
     title: 'Future trend',
     til: 'Future trend',
     text: "Despite that more and more industry players across the world have built partnership and poured resources into Micro LED development and research, the commercialization of the next generation display technology is still delayed. Due to technology barriers and equipment limitation, production cost for Micro LED display remains sky high, leading to postponed timeline of Micro LED display commercialization.",
     time: "2019-12-12",
     link: '/news/detail?id=2',
   },{
-    img: "/news/new1.jpg", // 尺寸585 X 300
+    img: '/news/3-1.png', // 尺寸585 X 300
     title: 'How to have a cool led',
     til: 'How to have a cool led',
     text: "With the development of technology, professional LED screen will be always improved in order to meet the application needs. Specialized products combined with application needs will form new LED product and areas. Safety must come first , today we’ll help you choose a real “cool screen”, especially outdoor ones.",
     time: "2019-12-12",
     link: '/news/detail?id=3',
   },{
-    img: "/news/new1.jpg", // 尺寸585 X 300
+    img: '/news/4-1.jpeg', // 尺寸585 X 300
     title: 'How to install your LED Displays from Different Ways',
     til: 'How to install your LED Displays from Different Ways',
     text: "",
     time: "2019-12-12",
     link: '/news/detail?id=4',
   },{
-    img: "/news/new1.jpg", // 尺寸585 X 300
+    img: '/news/5-1.png', // 尺寸585 X 300
     title: 'Repair guidance---Several steps to repair LED and IC',
     til: 'Repair guidance---Several steps to repair LED and IC',
     text: "",
     time: "2019-12-12",
     link: '/news/detail?id=4',
   }
-  
 ]
 
 const obj = {

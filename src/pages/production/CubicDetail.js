@@ -10,7 +10,9 @@ import l from './Detail.less';
     cubic: detail.cubic
 }))
 class CubicDetail extends React.Component{
-    
+    componentDidMount() {
+		window.scrollTo(0, 0)
+	}
     render() {
         const { dip, cubic } = this.props;
 

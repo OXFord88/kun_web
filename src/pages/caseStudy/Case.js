@@ -7,7 +7,9 @@ import l from './Case.less'
   banner: casestudy.banner,
 }))
 class Case extends React.Component {
-
+	componentDidMount() {
+		window.scrollTo(0, 0)
+	}
 	render() {
 		const { cases, banner } = this.props;
 		return (

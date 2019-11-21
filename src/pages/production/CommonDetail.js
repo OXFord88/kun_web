@@ -12,7 +12,9 @@ import l from './Detail.less';
 }))
 class CommonDetail extends React.Component{
     
-
+    componentDidMount() {
+		window.scrollTo(0, 0)
+	}
     renderSpecial = (message, lasts, list=[]) => {
         const { table } = this.props;
         console.log(table)

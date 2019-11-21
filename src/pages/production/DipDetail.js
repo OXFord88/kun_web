@@ -9,7 +9,9 @@ import l from './Detail.less';
     dip: detail.dip,
 }))
 class DipDetail extends React.Component{
-    
+    componentDidMount() {
+		window.scrollTo(0, 0)
+	}
     render() {
         const { dip } = this.props;
 

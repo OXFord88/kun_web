@@ -14,7 +14,9 @@ class Production extends React.Component {
 		activeIndex: 0,
 		key: 'finePitch',
 	}
-
+	componentDidMount() {
+		window.scrollTo(0, 0)
+	}
 	handleClick = (item, index) => {
 		this.setState({
 			activeIndex: index,

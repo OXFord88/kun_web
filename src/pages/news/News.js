@@ -8,7 +8,9 @@ import { connect } from 'dva';
   banner: news.banner
 }))
 class News extends React.Component {
-
+	componentDidMount() {
+		window.scrollTo(0, 0)
+	}
 	render() {
 		const { list, banner } = this.props;
 		return (

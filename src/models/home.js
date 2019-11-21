@@ -13,31 +13,44 @@ const banners = [
 
 // 产品图 图片尺寸 170 X 200
 const products = [
-  {img: '/home/product/pro_1.jpg', title: '1Narrow Pixel Pitch', til: 'UTV'},
-  {img: '/home/product/pro_1.jpg', title: '2Narrow Pixel Pitch', til: 'UTV'},
-  {img: '/home/product/pro_1.jpg', title: '3Narrow Pixel Pitch', til: 'UTV'},
-  {img: '/home/product/pro_1.jpg', title: '4Narrow Pixel Pitch', til: 'UTV'},
-  {img: '/home/product/pro_1.jpg', title: '5Narrow Pixel Pitch', til: 'UTV'},
-  {img: '/home/product/pro_1.jpg', title: '6Narrow Pixel Pitch', til: 'UTV'},
-  {img: '/home/product/pro_1.jpg', title: '7Narrow Pixel Pitch', til: 'UTV'},
-  {img: '/home/product/pro_1.jpg', title: '8Narrow Pixel Pitch', til: 'UTV'},
-  {img: '/home/product/pro_1.jpg', title: '9Narrow Pixel Pitch', til: 'UTV'},
-  {img: '/home/product/pro_1.jpg', title: '10Narrow Pixel Pitch', til: 'UTV'},
-  {img: '/home/product/pro_1.jpg', title: '11Narrow Pixel Pitch', til: 'UTV'},
-  {img: '/home/product/pro_1.jpg', title: '12Narrow Pixel Pitch', til: 'UTV'},
+  {img: '/img/ls1.png', title: 'Fine Pitch', til: 'LS Series', link: '/production/detail?id=138',},
+  {img: '/img/e1.png', title: 'Rental  ', til: 'E Series', link: '/production/detail?id=133',},
+  {img: '/img/h1.jpg', title: 'FIXED', til: 'H series', link: '/production/detail?id=127',},
+  {img: '/img/t1.jpg', title: 'FIXED', til: 'Talent', link: '/production/detail?id=117',},
+  {img: '/img/dip1.jpeg', title: 'FIXED', til: 'Outdoor DIP Solution', link: '/production/dip',},
+  {img: '/img/cubic1.jpg', title: 'FIXED', til: 'Cubic Series', link: '/production/cubic',},
 ]
 // case study 图片尺寸 250 X 300
 const casees = [
-  {img: '/home/case/unao1.jpg', title: '1Unano1.8, GT Church, USA, 2018'},
-  {img: '/home/case/unao2.jpg', title: '2Unano1.8, GT ChurchChurchChurch, USA, 2018'},
-  {img: '/home/case/unao1.jpg', title: '3Unano1.8, GT Church, USA, 2018'}
+  {img: '/case/card/碧桂园 P2.5.jpg', title: '碧桂园 P2.5'},
+  {img: '/case/card/Agentina P10.jpg', title: 'Agentina P10'},
+  {img: '/case/card/America P2.9.jpg', title: 'America P2.9'}
 ]
 
 // 图片尺寸 348 X 200
 const news = [
-  {img: "/home/solu/1a.jpg", title: '1Security Monitoring', text: 'As the quantity of security access signal and screen signal is numerous, and resolution is restricted by display area...'},
-  {img: "/home/solu/1a.jpg", title: '2Security Monitoring', text: 'As the quantity of security access signal and screen signal is numerous, and resolution is restricted by display area...'},
-  {img: "/home/solu/1a.jpg", title: '3Security Monitoring', text: 'As the quantity of security access signal and screen signal is numerous, and resolution is restricted by display area...'}
+  {
+    img: '/news/1-1.png', // 尺寸585 X 300
+    title: 'Further protection',
+    til: 'Further protection',
+    text: "In June, south China just has steped into a long rainy season, as LED is a Moisture Senstive Deivice, here is some knowledge i think you would like to know: about how to maintain the LED screen in the enviroments with heavy humidity",
+    time: "2019-12-12",
+    link: '/news/detail?id=1',
+  },{
+    img: '/news/2-1.jpeg', // 尺寸585 X 300
+    title: 'Future trend',
+    til: 'Future trend',
+    text: "Despite that more and more industry players across the world have built partnership and poured resources into Micro LED development and research, the commercialization of the next generation display technology is still delayed. Due to technology barriers and equipment limitation, production cost for Micro LED display remains sky high, leading to postponed timeline of Micro LED display commercialization.",
+    time: "2019-12-12",
+    link: '/news/detail?id=2',
+  },{
+    img: '/news/3-1.png', // 尺寸585 X 300
+    title: 'How to have a cool led',
+    til: 'How to have a cool led',
+    text: "With the development of technology, professional LED screen will be always improved in order to meet the application needs. Specialized products combined with application needs will form new LED product and areas. Safety must come first , today we’ll help you choose a real “cool screen”, especially outdoor ones.",
+    time: "2019-12-12",
+    link: '/news/detail?id=3',
+  }
 ]
 
 

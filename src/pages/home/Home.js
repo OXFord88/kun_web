@@ -2,6 +2,7 @@ import React from 'react';
 import l from './Home.less';
 import cx from 'classnames';
 import { connect } from 'dva'
+import router from 'umi/router';
 import Link from 'umi/link'
 import phone from '@/assets/home/indexwrap_01.png'
 import BannerAnim, { Element } from 'rc-banner-anim';
@@ -30,8 +31,14 @@ class Home extends React.Component {
 		}
 		return temp;
 	}
+
+
+	handleLink = (item) => {
+		router.push(item.link)
+	}
 	render() {
 		const { home: {banners, products, casees, news, contact} } = this.props;
+		console.log(products)
 		return (
 			<div className={l.box} ref={node => this.node = node}>
 				<div className={l.fixed}>
@@ -73,7 +80,7 @@ class Home extends React.Component {
 						          	item.map( (k,j) => {
 						          		return(
 						          			<TweenOne className={cx(l.son, l[j !== item.length - 1 ? 'mr' : null])} key={j} animation={{ y: 30, opacity: 0, type: 'from' }}>
-									            <div className={l.sonCell}>
+									            <div className={l.sonCell} onClick={this.handleLink.bind(null, k)}>
 										            <img src={k.img} alt="icon"/>
 										            <div className={l.text}>
 										            	<span>{k.title}</span>
@@ -111,7 +118,7 @@ class Home extends React.Component {
 									)
 								})
 							}
-							<Link to="/" className={l.learn}>Learn More</Link>
+							<Link to="/case" className={l.learn}>Learn More</Link>
 						</div>
 					</div>
 				</div>
@@ -119,7 +126,7 @@ class Home extends React.Component {
 
 				<div className={cx(l.contain, l.so_bg)}>
 					<div className={l.title}>News Center</div>
-					<Link to="/" className={l.learnBtn}>Learn More</Link>
+					<Link to="/news" className={l.learnBtn}>Learn More</Link>
 					<div className={l.content}>
 						<BannerAnim prefixCls={l.solution} type="across" dragPlay={false}>
 							<Element prefixCls={l.cell} key="0" leaveChildHide={true}>
@@ -135,7 +142,7 @@ class Home extends React.Component {
 							            <div className={l.bottom}>
 							            	<h3>{item.title}</h3>
 							            	<p>{item.text}</p>
-							            	<Link to="/">Learn more</Link>
+							            	<Link to={item.link}>Learn more</Link>
 							            </div>
 						            </div>
 						          </TweenOne>

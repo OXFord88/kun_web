@@ -6,6 +6,8 @@ import cx from 'classnames';
 @connect(({ services }) => ({
 	warrantyData: services.warranty,
 	banner: services.banner,
+	title: services.title,
+	six: services.six,
 }))
 class Service extends React.Component {
 	state = {
@@ -21,6 +23,8 @@ class Service extends React.Component {
 		const {
 			warrantyData,
 			banner,
+			title,
+			six
 		} = this.props;
 		return (
 			<div className={l.box}>
@@ -46,74 +50,88 @@ class Service extends React.Component {
 						</span>
 					</div>
 					<div className={l.line} />
-					{active === 'warranty' ? (
-						<ul className={l.company}>
-							{JSON.parse(JSON.stringify(warrantyData))
-								.splice(0, warrantyData.length - 1)
-								.map((m, n) => {
-									if (n % 2 === 0) {
-										return (
-											<li key={n}>
-												<div className={cx(l.con, l.pr)}>
-													{m.content.map((item, index) => {
-														return (
-															<Fragment>
-																<h3>{item.title}</h3>
-																<p>{item.text}</p>
-															</Fragment>
-														);
-													})}
-												</div>
-												<div className={l.img}>
-													<img src={m.img} alt="icon" />
-												</div>
-											</li>
-										);
-									} else {
-										return (
-											<li key={n}>
-												<div className={l.img}>
-													<img src={m.img} alt="icon" />
-												</div>
-												<div className={cx(l.con, l.pl)}>
-													{m.content.map((item, index) => {
-														return (
-															<Fragment>
-																<h3>{item.title}</h3>
-																<p>{item.text}</p>
-															</Fragment>
-														);
-													})}
-												</div>
-											</li>
-										);
-									}
-								})}
-							{JSON.parse(JSON.stringify(warrantyData))
-								.splice(-1)
-								.map((k, j) => {
-									return (
-										<li key={j}>
-											<div className={l.last}>
-												<img src={k.img} alt="icon" />
-												<div className={cx(l.con)}>
-													{k.content.map((item, index) => {
-														return (
-															<Fragment>
-																<h3>{item.title}</h3>
-																<p>{item.text}</p>
-															</Fragment>
-														);
-													})}
-												</div>
-											</div>
-										</li>
-									);
-								})}
-						</ul>
-					) : null}
-					{active === 'FAQ' ? <div>FAQ</div> : null}
 				</div>
+				{active === 'warranty' ? (<div>
+					<div className={l.topTitle} style={{ backgroundImage: `url(${title.img})`}}>
+						<div>
+							<h2>{title.til}</h2>
+							<p>{title.text}</p>
+						</div>
+					</div>
+					{
+						warrantyData.map( (item,index) => {
+							if(item.type === 'left') {
+								return(
+									<div key={index} style={{backgroundColor: '#f5f5f5'}}>
+										<div className={l.cell}>
+											<div className={l.ttx}>
+												<h3>{item.title}</h3>
+												{item.text.map((m, n) => {
+													if(m.type === 'title') {
+														return <h4>{m.value}</h4>
+													}else{
+														return <p>{m.value}</p>
+													}
+												})}
+											</div>
+											<div className={l.img}>
+												<img src={item.img} alt="icon" />
+											</div>
+										</div>
+									</div>
+								)
+							}else if(item.type === 'right') {
+								return(
+									<div key={index} style={{backgroundColor: '#fff'}}>
+										<div className={l.cell}>
+											<div className={l.img}>
+												<img src={item.img} alt="icon" />
+											</div>
+											<div className={l.ttx}>
+												<h3>{item.title}</h3>
+												{item.text.map((m, n) => {
+													if(m.type === 'title') {
+														return <h4>{m.value}</h4>
+													}else{
+														return <p>{m.value}</p>
+													}
+												})}
+											</div>
+										</div>
+									</div>
+								)
+							}else if(item.type === 'middle') {
+								return(
+									<div >
+										123
+									</div>
+								)
+							} 
+						})
+					}
+					<div className={l.topTitle} style={{ backgroundImage: `url(${title.img1})`}}>
+						<div>
+							<h2>{title.til1}</h2>
+							<p>{title.text1}</p>
+						</div>
+					</div>
+					<div className={l.last}>
+						{ 
+							six.map( (k,j) => {
+								if(k.type === 'title') {
+									return <h3 key={j}>{k.value}</h3>
+								}else if(k.type === 'text') {
+									return <p key={j}>{k.value}</p>
+								}else if(k.type === 'str') {
+									return <div style={{paddingLeft: 40}} key={j}>{k.value}</div>
+								}else if(k.type === 'sec') {
+									return <div style={{paddingLeft: 80}} key={j}>{k.value}</div>
+								}
+							})
+						}
+					</div>
+				</div>) : null}
+				{active === 'FAQ' ? <div>FAQ</div> : null}
 			</div>
 		);
 	}

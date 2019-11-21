@@ -204,7 +204,7 @@ class BasicLayout extends React.Component {
 					<div className={l.first}>
 						<div className={cx(l.cons, l.nav)}>
 							<div className={l.left}>
-								<LinkSmall to="/"><img src="/img/yay.jpg" alt="logo"/></LinkSmall>
+								<LinkSmall to="/"><img src="/logo_tiny.png" alt="logo"/></LinkSmall>
 							</div>
 							<div onMouseEnter={this.header.bind(null, 'in')} onMouseLeave={this.header.bind(null, 'out')} className={l.middle}>
 								{
