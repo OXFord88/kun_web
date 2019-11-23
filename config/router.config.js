@@ -14,7 +14,7 @@ export default [
 			{ path: '/production/cubic', component: './production/CubicDetail' },
 			{ path: '/solution', component: './solution/Solution' },
 			{ path: '/case', component: './caseStudy/Case' },
-			{ path: '/service', component: './service/Service' },
+			{ path: '/service', component: './service/ServiceOther' },
 			{ path: '/news', component: './news/News' },
 			{ path: '/news/detail', component: './news/Detail'},
 			{ path: '/about', component: './about/About' },

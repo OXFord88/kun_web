@@ -28,37 +28,36 @@ class BasicLayout extends React.Component {
 				{
 					title: 'Production', 
 					children: [
-						{title: 'Narrow Pixel Pitch', path: '/home'},
-						{title: 'Rental', path: '/home'},
-						{title: 'Fixed', path: '/home'}
+						{title: 'Fine Pitch', path: '/production'},
+						{title: 'Rental', path: '/production'},
+						{title: 'Fixed', path: '/production'}
 					]
 				},{
 					title: 'Case study', 
 					children: [
-						{title: 'Application', path: '/home'},
-						{title: 'Location', path: '/home'},
-						{title: 'Pixel Pitch', path: '/home'}
+						{title: 'Agentina P10', path: '/case'},
+						{title: 'America P2.9', path: '/case'},
+						{title: 'Brazil rental solution', path: '/case'}
 					]
 				},{
 					title: 'Service&Support', 
 					children: [
-						{title: 'Online Service', path: '/home'},
-						{title: 'Network', path: '/home'},
-						{title: 'Warranty Policy', path: '/home'},
-						{title: 'Download', path: '/home'},
-						{title: 'FAQ', path: '/home'},
+						{title: 'Warranty Policy', path: '/service'},
+						{title: 'FAQ', path: '/service'},
 					]
 				},{
 					title: 'News', 
 					children: [
-						{title: 'Company News', path: '/home'},
-						{title: 'Events', path: '/home'}
+						{title: 'Further protection', path: '/news/detail?id=1'},
+						{title: 'Future trend', path: '/news/detail?id=2'},
+						{title: 'How to have a cool led', path: '/news/detail?id=3'},
+						{title: 'How to install your LED Displays from Different Ways', path: '/news/detail?id=4'},
 					]
 				},{
 					title: 'About us', 
 					children: [
-						{title: 'About Unilumin', path: '/home'},
-						{title: 'Contact us', path: '/home'}
+						{title: 'Company profile', path: '/about'},
+						{title: 'Contact us', path: '/about'}
 					]
 				}
 			],
@@ -249,8 +248,8 @@ class BasicLayout extends React.Component {
 	      		}
 	      	</div>
 		      <div className={l.copy}>
-		      	<div>Copyright © SU360, All Rights Reserved. </div>
-		      	<div>京ICP备15014530号-6</div>
+		      	<div>Copyright © CM30, All Rights Reserved. </div>
+		      	<div>京ICP备15114130号-1</div>
 		      </div>
 	      </div>
 	    </div>

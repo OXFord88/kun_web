@@ -138,73 +138,13 @@ class About extends React.Component {
 
 							<div className={l.addr}>
 								<h2>{area.title}</h2>
-								<p>{area.text}</p>
-								<ul className={l.list}>
-									{
-										area.list.map( (item,index) => {
-											if (index === 0 || index === 1 || index === 4 || index === 5 || index === 7 || index === 8) {
-												return(
-													<li key={index}>
-														<div className={l.list_cell}>
-															<div className={l.img}>
-																<img src={item.img} alt="icon"/>
-															</div>
-															<div className={l.text}>
-																<h2>{item.title}</h2>
-																<p>{item.addr}</p>
-																<p>{item.tel}</p>
-																<p>{item.email}</p>
-															</div>
-														</div>
-													</li>
-												)
-											}else{
-												return(
-													<li key={index}>
-														<div className={l.list_cell}>
-															<div className={l.text}>
-																<h2>{item.title}</h2>
-																<p>{item.addr}</p>
-																<p>{item.tel}</p>
-																<p>{item.email}</p>
-															</div>
-															<div className={l.img}>
-																<img src={item.img} alt="icon"/>
-															</div>
-															
-														</div>
-													</li>
-												)
-											}
-										})
-									}
-								</ul>
-							</div>
-
-							<div className={l.addr}>
-								{/* <h2>{bottom.title}</h2>
-								<h5>{bottom.til}</h5> */}
-								<div className={l.cell}>
-									{
-										bottom.list.map( (k,j) => {
-											return(
-												<div className={l.bell} key={j}>
-													<img src={k.img} alt="icon"/>
-													<p>{k.til}</p>
-													{
-														k.text.map( (m,n) => {
-															return(
-																<div key={n}>
-																	{m}
-																</div>
-															)
-														})
-													}
-												</div>	
-											)
-										})
-									}
-								</div>
+								{
+									area.text.map( (item,index) => {
+										return <p key={index}>{item}</p>
+									})
+								}
+								<h3>Contact us: <a>{area.email}</a></h3>
+								
 							</div>
 						</div>
 						: null

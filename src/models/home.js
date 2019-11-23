@@ -2,24 +2,31 @@
 
 // 首页的banner图
 const banners = [
-  '/banner/Main1.jpg',  // 尺寸 无限宽 X 690
-  '/banner/Main2.jpg', 
-  '/banner/Main3.jpg', 
+  '/banner/E.jpg',  // 尺寸 无限宽 X 690
+  '/banner/H.jpg', 
+  '/banner/HQ.jpg', 
   '/banner/L.jpg',
-  '/banner/E.jpg',
-  '/banner/HQ.jpg',
-  '/banner/H251R.jpg',
+  '/banner/Main.jpg',
+  '/banner/R.jpg',
 ]
 
 // 产品图 图片尺寸 170 X 200
+// 首页产品图在此增加，例如我要新增一个产品，复制一行放在末尾，修改内容即可
+// 图片文件放置在public/img里面就可以了
+// link 表示的是详情页面，模版有三个种类，第一类为detail, 第二类为dip, 第三类为cubic，看详情页面的样子来选择不同的链接方式
 const products = [
-  {img: '/img/ls1.png', title: 'Fine Pitch', til: 'LS Series', link: '/production/detail?id=138',},
-  {img: '/img/e1.png', title: 'Rental  ', til: 'E Series', link: '/production/detail?id=133',},
-  {img: '/img/h1.jpg', title: 'FIXED', til: 'H series', link: '/production/detail?id=127',},
-  {img: '/img/t1.jpg', title: 'FIXED', til: 'Talent', link: '/production/detail?id=117',},
-  {img: '/img/dip1.jpeg', title: 'FIXED', til: 'Outdoor DIP Solution', link: '/production/dip',},
-  {img: '/img/cubic1.jpg', title: 'FIXED', til: 'Cubic Series', link: '/production/cubic',},
+  {img: '/img/ls1.png', title: 'Fine Pitch', til: 'LS Series', link: '/production/detail?id=138'},
+  {img: '/img/e1.png', title: 'Rental  ', til: 'E Series', link: '/production/detail?id=133'},
+  {img: '/img/h1.jpg', title: 'FIXED', til: 'H series', link: '/production/detail?id=127'},
+  {img: '/img/t1.jpg', title: 'FIXED', til: 'Talent', link: '/production/detail?id=117'},
+  {img: '/img/dip1.jpeg', title: 'FIXED', til: 'Outdoor DIP Solution', link: '/production/dip'},
+  {img: '/img/cubic1.jpg', title: 'FIXED', til: 'Cubic Series', link: '/production/cubic'},
 ]
+
+
+
+
+
 // case study 图片尺寸 250 X 300
 const casees = [
   {img: '/case/card/碧桂园 P2.5.jpg', title: '碧桂园 P2.5'},
