@@ -62,9 +62,9 @@ const news = [
 
 
 const contact = {
-  Phone: '1888888888',
-  Eamil: '361196961@qq.com',
-  Addre: 'beijing city address beijing',
+  Phone: '+86-13631566043',
+  Eamil: 'chris@enorled.com',
+  Addre: 'QIAOTONG Industrial Part, Shiyan, Baoan District, Shenzhen,China',
 }
 
 export default {
