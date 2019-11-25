@@ -152,11 +152,14 @@ const obj4 = [
         img: '/img/t3.png'
     }
 ]
+
+
+
 export default {
     namespace: 'detail',
   
     state: {
-        detail: {
+        detail: { // 通过明细
             '138': obj1,
             '133': obj2,
             '127': obj3,
@@ -181,7 +184,7 @@ export default {
                 ['','','','','',''],
             ]
         },
-        cubic: {
+        cubic: { // cubic产品明细
             title: 'iThin',
             text1: '90° right angle splicing',
             textImg: '/img/cubic1.jpg',
@@ -204,7 +207,7 @@ export default {
             img32: '/img/cur32.png',
 
         },
-        dip: {
+        dip: { // dip产品明细
             title: 'Outdoor DIP Solution',
             text1: 'The Longest Lifespan Outdoor DIP LED Display',
             text2: ' P10, P16, P20 available',

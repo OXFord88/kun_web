@@ -70,10 +70,10 @@ const address = [
     ]
   },
   {
-    img: "/about/fax.gif",
-    til: 'Fax',
+    img: "/about/email.gif",
+    til: 'Email',
     text: [
-      '+86-755-61881888'
+      'info@enorled.com'
     ]
   },
   {
@@ -156,7 +156,11 @@ export default {
       },
       area: {
         title: 'WORK WITH US',
-        text: 'We’re flexible and cooperative and determined to help you with your LED screen project. Over the last few years, we have specialized and affirmed in the LED video industry with a growing network of agents. Our team is dynamic, flexible and competitive. If you have a need,we’re here for you.If you’re interested in being our agent.',
+        text: [
+          'We’re flexible and cooperative and determined to help you with your LED screen project.',
+          'Over the last few years, we have specialized and affirmed in the LED video industry with a growing network of customers. Our team is dynamic, flexible and competitive. If you have a need, we’re here for you.If you’re interested in being our agent, we’re open to hear your ideas.'
+        ],
+        email: 'chris@enorled.com',
         // list: area
         list: []
       },

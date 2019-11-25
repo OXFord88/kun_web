@@ -38,7 +38,6 @@ class Home extends React.Component {
 	}
 	render() {
 		const { home: {banners, products, casees, news, contact} } = this.props;
-		console.log(products)
 		return (
 			<div className={l.box} ref={node => this.node = node}>
 				<div className={l.fixed}>
