@@ -55,7 +55,7 @@ class Home extends React.Component {
 					</div>
 				</div>
 
-				<BannerAnim prefixCls={l['banner-user']} autoPlay arrow={false} type="acrossOverlay">
+				<BannerAnim prefixCls={l['banner-user']} autoPlay autoPlaySpeed={10000} arrow={false} type="grid">
 					{
 						banners.map( (item,index) => {
 							return(
