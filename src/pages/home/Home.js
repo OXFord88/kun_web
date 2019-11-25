@@ -154,7 +154,7 @@ class Home extends React.Component {
 				</div>
 				
 				<div className={l.why}>
-					<h3 className={l.title}>Why choose Unilumin?</h3>
+					<h3 className={l.title}>Why choose ENOR?</h3>
 					<div className={l.content}>
 						<div>
 							<img src="/home/why/indexwhy_01.png" alt="icon"/>

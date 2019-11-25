@@ -18,7 +18,7 @@ class BasicLayout extends React.Component {
 		this.state = {
 			nav: [
 				// {name: 'Home', path: '/home'},
-				{name: 'Production', path: '/production'},
+				{name: 'Product', path: '/production'},
 				{name: 'Case study', path: '/case'},
 				{name: 'Service & Support', path: '/service'},
 				{name: 'News', path: '/news'},
