@@ -16,8 +16,12 @@ const banners = [
 // link 表示的是详情页面，模版有三个种类，第一类为detail, 第二类为dip, 第三类为cubic，看详情页面的样子来选择不同的链接方式
 const products = [
   {img: '/img/ls1.png', title: 'Fine Pitch', til: 'LS Series', link: '/production/detail?id=138'},
+  {img: '/img/lm1.png', title: 'Fine Pitch', til: 'LM Series', link: '/production/detail?id=139'},
   {img: '/img/e1.png', title: 'Rental  ', til: 'E Series', link: '/production/detail?id=133'},
-  {img: '/img/h1.jpg', title: 'FIXED', til: 'H series', link: '/production/detail?id=127'},
+  {img: '/img/r4.png', title: 'Rental  ', til: 'R Series', link: '/production/detail?id=134'},
+  {img: '/img/h1.jpg', title: 'FIXED', til: 'High standard H series', link: '/production/detail?id=127'},
+  {img: '/img/n1.png', title: 'FIXED', til: 'Regular N Series', link: '/production/detail?id=135'},
+  {img: '/img/o1.png', title: 'FIXED', til: 'Regular O Series', link: '/production/detail?id=136'},
   {img: '/img/t1.jpg', title: 'FIXED', til: 'Talent', link: '/production/detail?id=117'},
   {img: '/img/dip1.jpeg', title: 'FIXED', til: 'Outdoor DIP Solution', link: '/production/dip'},
   {img: '/img/cubic1.jpg', title: 'FIXED', til: 'Cubic Series', link: '/production/cubic'},

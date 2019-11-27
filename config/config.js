@@ -8,7 +8,7 @@ const plugins = [
       webpackChunkName: true,
       loadingComponent: './components/PageLoading/Index', 
     },
-    title: '官网',
+    title: 'LED Screen & Displays Manufacturer,LED solutions| Enor',
     dll: true,
     locale: {
       enable: true,
