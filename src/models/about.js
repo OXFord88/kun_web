@@ -78,42 +78,13 @@ const address = [
   },
   {
     img: "/about/factory.gif",
-    til: 'Factory Address',
+    til: 'Website',
     text: [
-      'Website:www.enorled.com'
+      'www.enorled.com'
     ]
   },
 ]
-const area = [
-  {
-    img: "/about/img_1.jpg", // 尺寸 295 X 300
-    title: 'UNILUMIN USA WEST COAST OFFICE',
-    addr: 'addr: 5635 Saticoy Street, Unit A, Van Nuy',
-    tel: 'tel : +1(818) 386 8444‬',
-    email: 'email: sales@unilumin.com'
-  },
-  {
-    img: "/about/img_1.jpg",
-    title: 'UNILUMIN USA WEST COAST OFFICE',
-    addr: '5635 Saticoy Street, Unit A, Van Nuy',
-    tel: '+1(818) 386 8444‬',
-    email: 'sales@unilumin.com'
-  },
-  {
-    img: "/about/img_1.jpg",
-    title: 'UNILUMIN USA WEST COAST OFFICE',
-    addr: '5635 Saticoy Street, Unit A, Van Nuy',
-    tel: '+1(818) 386 8444‬',
-    email: 'sales@unilumin.com'
-  },
-  {
-    img: "/about/img_1.jpg",
-    title: 'UNILUMIN USA WEST COAST OFFICE',
-    addr: '5635 Saticoy Street, Unit A, Van Nuy',
-    tel: '+1(818) 386 8444‬',
-    email: 'sales@unilumin.com'
-  },
-]
+
 
 const bottom = [
   {

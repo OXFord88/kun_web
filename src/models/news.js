@@ -44,7 +44,7 @@ const data = [
     til: 'Repair guidance---Several steps to repair LED and IC',
     text: "",
     time: "2019-12-12",
-    link: '/news/detail?id=4',
+    link: '/news/detail?id=5',
   }
 ]
 
@@ -106,7 +106,7 @@ const obj = {
       {type: 'text', value: 'With the development of technology, professional LED screen will be always improved in order to meet the application needs. Specialized products combined with application needs will form new LED product and areas. Safety must come first , today we’ll help you choose a real “cool screen”, especially outdoor ones.'},
       {type: 'img', value: '/news/3-1.png'},
       {type: 'text', value: 'First: Reliable materials'},
-      {type: 'text', value: 'Key components of LED display such as PCB board, LED,IC and other electric components. etc are very important. LED display screen manufactures should pay special attention on those components. As an experienced manufacture ,CLT’s strategic partners are all big and reliable companies who also put safety as first priority. '},
+      {type: 'text', value: 'Key components of LED display such as PCB board, LED,IC and other electric components. etc are very important. LED display screen manufactures should pay special attention on those components. As an experienced manufacture ,ENOR’s strategic partners are all big and reliable companies who also put safety as first priority. '},
       {type: 'img', value: '/news/3-2.png'},
       {type: 'text', value: 'Second: Structure and installation'},
       {type: 'text', value: 'Despite the fact that outdoor cabinet itself has extra cooling fans on the back doors  ,exterior and internal structure are also important factors to have keep the screen cool. The use of “hollow design”can help a lot because after heat is discharged from the cabinet, we’d create a good “airway”to let them go to the atmosphere as fast as possible. And regular inspection of professional technical personnel is also needed.'},

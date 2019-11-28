@@ -26,7 +26,7 @@ export default {
       discription: 'Cyprus P6'
     }, {
       url: '/case/card/H251 ,Korea, Churce.jpg',
-      discription: 'H251 ,Korea, Churce'
+      discription: 'H251, South Korea, Church'
     }, {
       url: '/case/card/Hai Kou P25.JPG',
       discription: 'Hai Kou P25'
@@ -44,7 +44,7 @@ export default {
       discription: 'Italy P10'
     }, {
       url: '/case/card/Korea ,churce,P2.5 .jpg',
-      discription: 'Korea ,churce,P2.5'
+      discription: 'South Korea, Church,P2.5'
     }, {
       url: '/case/card/Malaysia P10.JPG',
       discription: 'Malaysia P10'

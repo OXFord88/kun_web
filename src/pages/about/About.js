@@ -49,7 +49,7 @@ class About extends React.Component {
 												<div className={cx(l.con, l.pr)}>
 													{
 														m.content.map( (item,index) => {
-															return<Fragment>
+															return<Fragment key={index}>
 																<h3>{item.title}</h3>
 																<p>{item.text}</p>
 															</Fragment>
@@ -70,7 +70,7 @@ class About extends React.Component {
 												<div className={cx(l.con, l.pl)}>
 													{
 														m.content.map( (item,index) => {
-															return<Fragment>
+															return<Fragment key={index}>
 																<h3>{item.title}</h3>
 																<p>{item.text}</p>
 															</Fragment>
@@ -92,7 +92,7 @@ class About extends React.Component {
 												<div className={cx(l.con)}>
 													{
 														k.content.map( (item,index) => {
-															return<Fragment>
+															return<Fragment key={index}>
 																<h3>{item.title}</h3>
 																<p>{item.text}</p>
 															</Fragment>

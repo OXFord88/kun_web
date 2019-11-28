@@ -8,7 +8,8 @@ import l from './Detail.less';
 @connect(({ detail }) => ({
     detail: detail.detail,
     last: detail.last,
-    table: detail.table
+    table: detail.table,
+    tableData: detail.tableData,
 }))
 class CommonDetail extends React.Component{
     
@@ -85,22 +86,45 @@ class CommonDetail extends React.Component{
                 </div>
                 <div className={l.white}>
                     <div className={l.table}>
-                        <img src={table.img} alt="table" />
+                        <table border="0" cellPadding="0" cellSpacing="0">
+                            <thead>
+                                <tr>
+                                    {
+                                        table.th.map( (item,index) => {
+                                            return <th key={index}>{item}</th>
+                                        })
+                                    }
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {
+                                  table.td.map( (item,index) => {
+                                        return <tr key={index}>
+                                            {
+                                                item.map( (k,j) => {
+                                                    return <td key={j}>{k}</td>
+                                                })
+                                            }
+                                        </tr>
+                                    })  
+                                }
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
         )
     }
     render() {
-        const { detail, last, location:{query} } = this.props;
+        const { detail, last, location:{query}, tableData } = this.props;
         const message = detail[query.id] ? detail[query.id] : [];
+        const tables = tableData[query.id] ? tableData[query.id] : {};
         const lasts = message.splice(1, message.length);
         const imgs = last[query.id]
-        console.log(imgs)
         if(query.id === '117'){
             return this.renderSpecial(message, lasts, imgs)
         }
-
+        console.log(tables, 'tables')
         return(
             <div>
                 <div className={l.top}>
@@ -162,6 +186,41 @@ class CommonDetail extends React.Component{
                     <div className={l.lastImg}>
                         <img  src={imgs} alt="me"/>
                     </div>
+                }
+                {tables.mark ?
+                    <div className={l.white}>
+                        <div className={l.table}>
+                            <table border="0" cellPadding="0" cellSpacing="0">
+                                <thead>
+                                    <tr>
+                                        {
+                                            tables.th.map( (item,index) => {
+                                                return <th key={index}>{item}</th>
+                                            })
+                                        }
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {
+                                    tables.td.map( (item,index) => {
+                                            return <tr key={index}>
+                                                {
+                                                    item.map( (k,j) => {
+                                                        return <td key={j}>{k}</td>
+                                                    })
+                                                }
+                                            </tr>
+                                        })  
+                                    }
+                                    <tr>
+                                        <td>Mark</td>
+                                        <td colSpan={tables.mark.col}>{tables.mark.text}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    : null
                 }
             </div>
         )

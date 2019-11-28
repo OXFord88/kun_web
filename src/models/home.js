@@ -2,12 +2,12 @@
 
 // 首页的banner图
 const banners = [
-  '/banner/E.jpg',  // 尺寸 无限宽 X 690
-  '/banner/H.jpg', 
-  '/banner/HQ.jpg', 
-  '/banner/L.jpg',
   '/banner/Main.jpg',
+  '/banner/H.jpg', 
   '/banner/R.jpg',
+  '/banner/L.jpg',
+  '/banner/HQ.jpg', 
+  '/banner/E.jpg',  // 尺寸 无限宽 X 690
 ]
 
 // 产品图 图片尺寸 170 X 200
@@ -67,7 +67,7 @@ const news = [
 
 const contact = {
   Phone: '+86-13631566043',
-  Eamil: 'chris@enorled.com',
+  Eamil: 'info@enorled.com',
   Addre: 'QIAOTONG Industrial Part, Shiyan, Baoan District, Shenzhen,China',
 }
 

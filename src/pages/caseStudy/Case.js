@@ -21,7 +21,7 @@ class Case extends React.Component {
 					</div>
 					<ul className={l.caselist}>
 						{cases.map((item, index) =>
-							<li>
+							<li key={index}>
 								<img src={item.url} alt="" />
 								<p>{item.discription}</p>
 							</li>

@@ -36,14 +36,14 @@ class Production extends React.Component {
 					</div>
 					<div className={l.productnav}>
 						{productnav.map((item, index) => (
-							<a className={`${index == this.state.activeIndex ? l.active : ''}`} onClick={() => this.handleClick(item, index)}>{item.title}</a>
+							<a key={index} className={`${index == this.state.activeIndex ? l.active : ''}`} onClick={() => this.handleClick(item, index)}>{item.title}</a>
 						))}
 					</div>
 					<ul className={l.productList}>
 						{products.map((item, index) => {
 							if (index % 2 == 0) {
 								return (
-									<li>
+									<li key={index}>
 										<h4 className={cx(l.titleName, l.w370)}>
 											<a>{item.title}</a>
 										</h4>
@@ -59,7 +59,7 @@ class Production extends React.Component {
 								);
 							} else {
 								return (
-									<li>
+									<li key={index}>
 										<div className={cx(l.mask, l.w370)}>
 											<h5>{item.smalltitle}</h5>
 											<p className={l.text}>{item.text}</p>

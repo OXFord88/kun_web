@@ -5,7 +5,7 @@ import cx from 'classnames';
 
 @connect(({ services }) => ({
 	banner: services.banner,
-    message: services.message
+	message: services.message
 }))
 class ServiceOther extends React.Component {
 	state = {
@@ -27,7 +27,7 @@ class ServiceOther extends React.Component {
 		} = this.props;
 		return (
 			<div className={l.box}>
-				<div className={l.insideBanner} style={{backgroundImage: `url(${banner})`}}/>
+				<div className={l.insideBanner} style={{ backgroundImage: `url(${banner})` }} />
 				<div className={l.content}>
 					<div className={l.title}>
 						<h3>
@@ -51,32 +51,32 @@ class ServiceOther extends React.Component {
 					<div className={l.line} />
 				</div>
 				{active === 'warranty' ? (<div>
-                    <div className={l.other} style={{ backgroundImage: `url(/services/policy2_03.jpg)`}}>
-                        <div className={l.texts}>
-							<div style={{textAlign: 'center'}}>
+					<div className={l.other} style={{ backgroundImage: `url(/services/policy2_03.jpg)` }}>
+						<div className={l.texts}>
+							<div style={{ textAlign: 'center' }}>
 								<h2>{message.til}</h2>
 								<p>{message.text}</p>
 								<img src={message.img} alt="icon" />
 							</div>
-							<h3 style={{marginBottom: 50}}>{message.dear}</h3>
+							<h3 style={{ marginBottom: 50 }}>{message.dear}</h3>
 							<p>{message.head}</p>
 							{
-								message.list.map( (item,index) => {
-									if(item.type === 'title') {
-										return <h4 className={l.h4}>{item.value}</h4>
-									}else if(item.type === 'text') {
-										return <div className={l.tt}>{item.value}</div>
-									}else if(item.type === 'img') {
-										return <img className={l.tm} src={item.value} alt="icon" />
+								message.list.map((item, index) => {
+									if (item.type === 'title') {
+										return <h4 key={index} className={l.h4}>{item.value}</h4>
+									} else if (item.type === 'text') {
+										return <div key={index} className={l.tt}>{item.value}</div>
+									} else if (item.type === 'img') {
+										return <img key={index} className={l.tm} src={item.value} alt="icon" />
 									}
 								})
 							}
-							<div style={{marginTop: 100}}>
+							<div style={{ marginTop: 100 }}>
 								<p>{message.lastText}</p>
-								<img style={{height: 100}} src={message.lastImg} alt="icon" />
+								<img style={{ height: 100 }} src={message.lastImg} alt="icon" />
 							</div>
-                        </div>
-                    </div>
+						</div>
+					</div>
 				</div>) : null}
 				{active === 'FAQ' ? <div className={l.fq}>
 					暂无内容

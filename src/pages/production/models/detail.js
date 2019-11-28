@@ -314,6 +314,109 @@ export default {
             '136': obj8,
 
         },
+        tableData: {
+            '138': {
+                th: ['Item','LS-P1.5','LS-P1.6','LS-P1.8','LS-P2.5'],
+                td: [
+                    ['Pixel Pitch','P1.5','P1.6','P1.8','P2.5'],
+                    ['Cabinet resolution(pixels)','304*304','288*288','256*256','192*192'],
+                    ['Cabinet size(mm)','480*480','480*480','480*480','480*480'],
+                    ['Material','Die cast Aluminum','Die cast Aluminum','Die cast Aluminum','Die cast Aluminum'],
+                    ['Basic configuration','SMD1010','SMD1010','SMD1515','SMD2020'],
+                ],
+                mark: {
+                    text: 'For golden ratio products, please refer to LM series',
+                    col: 4
+                }
+            },
+            '139': {
+                th: ['Item','LM-P0.8','LM-P1.2','LM-P1.4','LM-P1.5'],
+                td: [
+                    ['Pixel Pitch','P0.8','P1.2','P1.4','P1.5'],
+                    ['Cabinet resolution(pixels)','750*422','480*270','417*233','384*216'],
+                    ['Cabinet size(mm)','600*337.5','600*337.5','600*337.5','600*337.5'],
+                    ['Material','Die cast Aluminum','Die cast Aluminum','Die cast Aluminum','Die cast Aluminum'],
+                    ['Basic configuration','MINI','SMD1010','SMD1010','SMD1010'],
+                ],
+                mark: {
+                    text: 'For high cost performance products, please refer to H series',
+                    col: 4
+                }
+            },
+            '133': {
+                th: ['Item','E261-P2.6','E391-P3.9'],
+                td: [
+                    ['Pixel Pitch','P2.6','P3.9'],
+                    ['Cabinet resolution(pixels)','192*192','128*128'],
+                    ['Cabinet size(mm)','500*500','500*500'],
+                    ['Material','Die cast Aluminum','Die cast Aluminum'],
+                    ['Basic configuration','SMD2020','SMD2020'],
+                ],
+                mark: {
+                    text: 'LED, IC can be customized, usually we use Nationstar+MBI',
+                    col: 2
+                }
+            },
+            '134': {
+                th: ['Item','R-P2.6','R-P2.9','R-P3.9','R-P4.8','RO-P3.9','RO-P4.8'],
+                td: [
+                    ['Pixel Pitch','P2.6','P3.9','P3.9','P4.8','P3.9','P4.8'],
+                    ['Application','Indoor','Indoor','Indoor','Indoor','Outdoor','Outdoor'],
+                    ['Cabinet resolution(pixels)','192*192','172*172','128*128','104*104','128*128','104*104'],
+                    ['Cabinet size(mm)','500*500','500*500','500*500','500*500','500*500','500*500'],
+                    ['Material','Die cast Aluminum','Die cast Aluminum','Die cast Aluminum','Die cast Aluminum','Die cast Aluminum','Die cast Aluminum'],
+                    ['Basic configuration','SMD2020','SMD2020','SMD2020','SMD2020','SMD1921','SMD1921/2727'],
+                ],
+                mark: {
+                    text: '500*500mm Plus 500*1000mm avaliable, flexible for your projects',
+                    col: 6
+                }
+            },
+            '127': {
+                th: ['Item','H81-P1.8','H-P2.5'],
+                td: [
+                    ['Pixel Pitch','P1.8','P2.5'],
+                    ['Cabinet resolution(pixels)','256*256','192*192'],
+                    ['Cabinet size(mm)','480*480','480*480'],
+                    ['Material','Die cast Aluminum','Die cast Aluminum'],
+                    ['Basic configuration','SMD1515','SMD2020'],
+                ],
+                mark: {
+                    text: 'Cableless design; both LET,IC can be customized',
+                    col: 2
+                }
+            },
+            '135': {
+                th: ['Item','N-P2.9','N-P3.9','N-P4.8'],
+                td: [
+                    ['Pixel Pitch','P2.9','P3.9','P4.8'],
+                    ['Application','Indoor','Indoor','Indoor'],
+                    ['Cabinet resolution(pixels)','172*172','128*128','104*104'],
+                    ['Cabinet size(mm)','500*500','500*500','500*500'],
+                    ['Material','Die cast Aluminum','Die cast Aluminum','Die cast Aluminum'],
+                    ['Basic configuration','SMD2020','SMD2020','SMD2020'],
+                ],
+                mark: {
+                    text: '500*500mm Plus 500*1000mm available, flexible for your projects',
+                    col: 3
+                }
+            },
+            '136': {
+                th: ['Item','O-P4','O-P5','O-P6.6','O-P8','O-P10'],
+                td: [
+                    ['Pixel Pitch','P4','P5','P6.6','P8','P10'],
+                    ['Application','Outdoor','Outdoor','Outdoor','Outdoor','Outdoor'],
+                    ['Cabinet resolution(pixels)','240*240','192*192','144*144','120*120','96*96'],
+                    ['Cabinet size(mm)','960*960','960*960','960*960','960*960','960*960'],
+                    ['Brightness(nits)','>4000','>4500','>5500','>5500','>6500'],
+                    ['Basic configuration','SMD1921','SMD1921','SMD3535','SMD3535','SMD3535'],
+                ],
+                mark: {
+                    text: 'Customized cabinet dimensions, curved solution available',
+                    col: 5
+                }
+            },
+        },
         last: {
             '138': '/img/ls5.png',
             '133': '/img/e_last.png',
@@ -327,10 +430,30 @@ export default {
             img: '/img/table.jpg',
             th: ['Parameters','T400','T500','T660','T800','T1000'],
             td: [
-                ['','','','','',''],
-                ['','','','','',''],
-                ['','','','','',''],
-                ['','','','','',''],
+                ['Pixel Pitch(mm)','4','5','6.67','8','10'],
+                ['Pixel Confguration','SMD 1921','SMD 2727','SMD 3535','SMD 3535','SMD 3535'],
+                ['Pixel Density(dots/sqm)','62500','40000','22500','15625','100000'],
+                ['Panel Dimension(W*H*D)(mm)','960X960X132','960X960X133','960X960X133','960X960X133','960X960X133'],
+                ['Panel Material','Die-casting Magnesium','Die-casting Magnesium','Die-casting Magnesium','Die-casting Aluminum','Die-casting Magnesium'],
+                ['Module Weight(kg/panel)','0.57','0.55','0.58','0.54','0.5'],
+                ['Panel Weight(kg/pannel)','31.5','31','30','30','31'],
+                ['Gray Scale','16384','16384','16384','16384','16384'],
+                ['Color Depth(Bit)','14','14','14','14','14'],
+                ['Refresh Rate(Hz)','840','960','720','960','1440'],
+                ['Driver Method/scan','1/10','1/8','1/6','1/5','1/2'],
+                ['Brightness(nit)','5500','6000','6000','6000','6500'],
+                ['Horizontal Viewing Angle(˚)','140','160','140','140','140'],
+                ['Vertical Viewing Angle(˚)','100','100','100','100','100'],
+                ['AC Power Input(V)','AC220±10%','AC220±10%','AC220±10%','AC220±10%','AC220±10%'],
+                ['AC Power Frequency(Hz)','50','50','50','50','50'],
+                ['Max Power(W/㎡)','1100','1140','760','850','1000'],
+                ['Avg Power(W/㎡)','380','450','310','380','400'],
+                ['Storage Temperature(℃)','-40 ~ 80','-40 ~ 80','-40 ~ 80','-40 ~ 80','-40 ~ 80'],
+                ['Operating Temperature(℃)','-20 ~ 40','-20 ~ 40','-20 ~ 40','-20 ~ 40','-20 ~ 40'],
+                ['Storage/Operating Humidity','10% ~ 90%','10% ~ 90%','10% ~ 90%','10% ~ 90%','10% ~ 90%'],
+                ['IP Rating','IP65/IP54','IP65/IP54','IP65/IP54','IP65/IP54','IP65/IP54'],
+                ['Lifetime Typical Value(Hrs)','100,000','100,000','100,000','100,000','100,000'],
+                ['Installation Type','Fixed','Fixed','Fixed','Fixed','Fixed'],
             ]
         },
         cubic: { // cubic产品明细
