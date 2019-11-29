@@ -194,7 +194,7 @@ class BasicLayout extends React.Component {
 					</div>
 					<div className={l.copy}>
 						<div>Copyright © CM30, All Rights Reserved. </div>
-						<div>京ICP备15114130号-1</div>
+						<div>15114130-1</div>
 					</div>
 				</div>
 			</div>
